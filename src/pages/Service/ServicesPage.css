@@ -1,4 +1,7 @@
 .servicios .row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    gap: 1.5rem;
     text-align: center;
 }
 
@@ -33,7 +36,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem; /* Ajusta según sea necesario */
+    margin-top: 2rem; 
 }
 
 
