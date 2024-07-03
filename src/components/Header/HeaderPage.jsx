@@ -1,58 +1,58 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
 import DarkMode from '../darkMode/darkMode';
-import { Row, Col, Image } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { Image } from 'react-bootstrap';
+import { NavLink, Link } from 'react-router-dom';
+import "./Header.css"
 
 const HeaderPage = () => {
+
+  const menuDesplegable = () => {
+      let navbar = document.querySelector('.navbar');
+      navbar.classList.toggle("activar");
+
+      window.onscroll = () => {
+          if (window.scrollY > 0) {
+              document.querySelector(".site-header").classList.add("activar")
+          } else document.querySelector(".site-header").classList.remove("activar")
+
+          navbar.classList.remove("activar")
+      }
+  }
+
   return (
-    <div>
-      <Navbar expand="lg" className="bg-body-tertiary">
-        <Container className="text-center">
-            <NavLink to="/">
-                <Navbar.Brand>
-                    <Row className="justify-content-center align-items-center text-center">
-                        <Col xs={12} md={6}>
-                            <Image src="./src/img/logo/54345976_transparent_edit.png" alt="logo" className="header-image" fluid />
-                        </Col>
-                    </Row>
-                </Navbar.Brand>
-            </NavLink>
-        </Container>
-      </Navbar>
+      <header className="site-header">
+          <div id="menu-btn"  onClick={menuDesplegable}><i class="bi bi-list"></i></div>
 
-      <Container className="custom-nav-container">
-        <Nav className="custom-nav">
-          <Nav.Item>
-            <NavLink to="/">Inicio</NavLink>
-          </Nav.Item>
+          <NavLink className="logo" to="/">
+            <Image src="./src/img/logo/54345976_transparent_edit.png" alt="logo" className="header-image" fluid />
+          </NavLink>
 
-          <Nav.Item>
-            <NavLink to="/About">Sobre Mi</NavLink>
-          </Nav.Item>
-
-          <Nav.Item>
-            <NavLink to="/Services">Servicios</NavLink>
-          </Nav.Item>
-
-          <Nav.Item>
-            <NavLink to="/Project">Proyectos</NavLink>
-          </Nav.Item>
-
-          <Nav.Item>
-            <NavLink to="/Contact">Contacto</NavLink>
-          </Nav.Item>
-
+          <nav className="navbar">
+              <Link to="inicio" spy={true} offset={-150} href="#inicio">
+                  <p>Inicio</p>
+              </Link>
+              <Link to="sobre-mi" spy={true} offset={-150} href="#sobre-mi">
+                  <p>Sobre Mi</p>
+              </Link>
+              <Link to="servicios" spy={true} offset={-150} href="#servicios">
+                  <p>Servicios</p>
+              </Link>
+              <Link to="proyectos" spy={true} offset={-150} href="#proyectos">
+                  <p>Proyectos</p>
+              </Link>
+              <Link to="contactos" spy={true} offset={-150} href="#contactos">
+                  <p>Contacto</p>
+              </Link>
+              <div id="buttons">
+                  <img onClick={() => idioma.selectLanguage('en-US')} src="https://nahuel61920.github.io/Portafoliovirtual/img/en.png" alt="EEUU" />
+                  <img onClick={() => idioma.selectLanguage('es-ES')} src="https://nahuel61920.github.io/Portafoliovirtual/img/es.png" alt="España" />
+              </div>
+          </nav>
           <div className="switch" id="switch">
-            <DarkMode />
+              <DarkMode />
           </div>
-
-        </Nav>
-      </Container>
-    </div>
-  );
+      </header>
+  )
 }
 
 export default HeaderPage;

@@ -5,6 +5,7 @@ import ParticlesBackground from '../../components/ParticlesBackground/ParticlesB
 import Content from '../../components/Content/Content'
 import Main from '../../components/Main';
 import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';
+import Footer from '../../components/Footer/Footer';
 
 const Home = () => {
   return (
@@ -19,6 +20,8 @@ const Home = () => {
       <Main />
 
       <ScrollToTop />
+
+      <Footer />
 
     </div>
   )

@@ -16,6 +16,10 @@
     --box-shadow-claro:0 .5rem .5rem rgba(255,255,255,.1);
 }
 
+.background {
+    background-color: white;
+}
+
 
 *{
     margin: 0;
@@ -192,6 +196,15 @@ body.dark .btn::after {
 	width: 100%;
     position: fixed;
     z-index: -1;
+    background-color: #fff;
+}
+
+body.dark .particles-css {
+    height: 100vh; 
+	width: 100%;
+    position: fixed;
+    z-index: -1;
+    background-color: #000000;
 }
 
 .particles-2-css {

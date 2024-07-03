@@ -4,9 +4,24 @@ import ParticlesBackground from '../../components/ParticlesBackground/ParticlesB
 import ScrollToTop from '../../components/ScrollToTop/ScrollToTop'
 import { Link } from 'react-router-dom'
 import ButtomGet from '../../components/ButtonGet/ButtomGet'
+import Footer from '../../components/Footer/Footer'
 
 
 const AboutPage = () => {
+
+    function readMore() {
+        let btnHide = document.querySelector("#btn-hide");
+        let parrafoActive = document.querySelector(".parrafo-active");
+    
+        parrafoActive.classList.toggle("show");
+    
+        if (parrafoActive.classList.contains("show")) {
+          btnHide.innerHTML = "↑";
+        } else {
+          btnHide.innerHTML = "Read more";
+        }
+      }
+
   return (
     <>
 
@@ -31,10 +46,8 @@ const AboutPage = () => {
                         </ul>
                         <div className="mas-info">
                             <a target="_blank" rel="noopener noreferrer"  className="btn-codigo buttonDownload">Descargar CV</a>
-                            <div className='mas-info-btn'>
-                                <Link to="/about">
-                                    <ButtomGet/>
-                                </Link>
+                            <div className="btn-info">
+                                <div className="custom-btn btn-codigo" id="btn-hide" onClick={readMore}><span>Read more</span></div>
                             </div>
                         </div>
                     </div>
@@ -210,6 +223,8 @@ const AboutPage = () => {
     </main>
     
     <ScrollToTop />
+
+    <Footer />
     </>
   )
 }

@@ -1,0 +1,138 @@
+/* General Styles */
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Experience Timeline Styles */
+.experience-timeline {
+    margin-top: 4rem;
+    width: 100%;
+    height: 200px;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    position: relative;
+
+}
+
+
+.timeline-title {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 4rem;
+    padding-left: 2rem;
+    color: #008b0c;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.bi-briefcase-fill {
+    margin-right: 1rem;
+}
+
+/* Dark Mode Styles for .timeline-title */
+body.dark .timeline-title {
+    color: #05ff1a;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 40%;
+    left: 4.2%;
+    height: 100%;
+    width: 2px;
+    background: rgba(58, 58, 58, 0.593);
+}
+
+/* Dark Mode Styles for .timeline-line */
+body.dark .timeline-line {
+    background: rgba(204, 204, 204, 0.812);
+    
+}
+
+.timeline-list {
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+/* Experience Item Styles */
+.experience-item {
+    position: relative;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.experience-content {
+    position: relative;
+}
+
+.experience-header {
+    position: sticky;
+    top: 0;
+}
+
+.experience-point {
+    position: absolute;
+    top: -3rem;
+    left: -2.4rem;
+    font-size: 5rem;
+    color: #57df34;
+}
+
+/* Dark Mode Styles for .experience-point */
+body.dark .experience-point {
+    color: #33ff00;
+}
+
+.experience-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #18b300;
+}
+
+/* Dark Mode Styles for .experience-title */
+body.dark .experience-title {
+    color: #01d412;
+}
+
+.experience-company {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #555555;
+}
+
+/* Dark Mode Styles for .experience-company */
+body.dark .experience-company {
+    color: #aaaaaa;
+}
+
+.experience-date {
+    font-size: 0.875rem;
+    color: rgba(85, 85, 85, 0.8);
+}
+
+/* Dark Mode Styles for .experience-date */
+body.dark .experience-date {
+    color: rgba(200, 200, 200, 0.8);
+}
+
+.experience-description {
+    display: flex;
+    flex-direction: column;
+    color: #555;
+}
+
+/* Dark Mode Styles for .experience-description */
+body.dark .experience-description {
+    color: #cccccc;
+}

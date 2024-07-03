@@ -3,6 +3,7 @@ import About from './About'
 import Service from './Service'
 import Project from './Project'
 import Contact from './Contact'
+import ExperienceList from '../Experiencie/ExperienceList'
 
 const Main = () => {
   return (
@@ -10,6 +11,8 @@ const Main = () => {
       <About />
 
       <Service />
+
+      <ExperienceList />
 
       <Project />
 

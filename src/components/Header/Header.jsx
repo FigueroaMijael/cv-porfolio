@@ -3,12 +3,9 @@ import DarkMode from '../darkMode/darkMode';
 import { Image } from 'react-bootstrap';
 import { NavLink, Link } from 'react-router-dom';
 import "./Header.css"
-import { useContext } from 'react';
 
 const Header = () => {
-  // Buttom language
-  // const idioma = useContext(langContext);
-  // Menu desplegable
+
   const menuDesplegable = () => {
       let navbar = document.querySelector('.navbar');
       navbar.classList.toggle("activar");

@@ -1,8 +1,9 @@
+/* Dark Mode Styles */
 body.dark {
   background: rgb(14, 12, 12);
 }
 
-body.dark section .heading {
+body.dark .heading {
   color: var(--white);
 }
 
@@ -17,8 +18,7 @@ body.dark .btn-codigo:hover {
   color: var(--black);
 }
 
-/********************** header **********************/
-
+/* Header */
 body.dark .site-header {
   background: #111111;
 }
@@ -40,8 +40,7 @@ body.dark .navbar .active-link::before {
   background: var(--green);
 }
 
-/********************** Sobre Mi **********************/
-
+/* Sobre Mi */
 body.dark section .row .columns {
   background: rgb(14, 12, 12);
   color: var(--light-color);
@@ -69,8 +68,7 @@ body.dark main section .row .columns .skill img:hover {
   filter: grayscale(0);
 }
 
-/********************** Servicios **********************/
-
+/* Servicios */
 body.dark .servicios .row .columns {
   background: #111;
   border-bottom: 1rem solid #111;
@@ -93,30 +91,24 @@ body.dark .servicios .row h3 {
   color: var(--white) !important;
 }
 
-/********************** Proyectos **********************/
-
+/* Proyectos */
 body.dark .proyectos .proyectos-slider .caja .content h3 {
   color: var(--white);
 }
 
 body.dark .proyectos .proyectos-slider .caja .content p {
-  color: var(--light-color);
+  color: var (--light-color);
 }
 
 body.dark .proyectos .proyectos-slider .caja .content p span {
   color: var(--white);
 }
 
-body.dark
-  .proyectos
-  .swiper
-  .swiper-pagination-bullets
-  .swiper-pagination-bullet {
+body.dark .proyectos .swiper .swiper-pagination-bullets .swiper-pagination-bullet {
   background: var(--white);
 }
 
-/********************** Contactos **********************/
-
+/* Contactos */
 body.dark .contactos .titulo {
   color: var(--white);
 }
@@ -131,15 +123,13 @@ body.dark .icons a:nth-child(6) .text {
   border-color: #fff;
 }
 
-/********************** Boton up **********************/
-
+/* Boton up */
 body.dark .cm-up .cm-icon {
   background: var(--white);
   color: var(--black);
 }
 
-/********************** Footer **********************/
-
+/* Footer */
 body.dark .footer {
   background: #111;
   margin: 0;
@@ -154,14 +144,12 @@ body.dark .footer .site-footer .redes-sociales a {
   color: var(--white);
 }
 
-/********************** Sobre-mi-seccion **********************/
-
+/* Sobre-mi-seccion */
 body.dark .sobre-mi-info p {
   color: var(--light-color);
 }
 
-/********************** Skill seccion **********************/
-
+/* Skill seccion */
 body.dark .skills-img {
   filter: grayscale(100%);
 }
@@ -169,6 +157,7 @@ body.dark .skills-img {
 body.dark .skill-card:hover .skills-img {
   filter: grayscale(0%);
 }
+
 body.dark .skill-name {
   color: var(--white);
 }
@@ -177,8 +166,7 @@ body.dark .skill-info {
   color: var(--light-color);
 }
 
-/********************** Services seccion **********************/
-
+/* Services seccion */
 body.dark .site-services .row .columns {
   background: #111111;
 }
@@ -191,8 +179,7 @@ body.dark .site-services .row .columns li i {
   color: var(--green);
 }
 
-/********************** Services seccion **********************/
-
+/* Preguntas seccion */
 body.dark .preguntas .accordion-container .accordion .accordion-heading h3,
 body.dark .preguntas .accordion-container .accordion .accordion-heading i {
   color: var(--white);
@@ -204,31 +191,16 @@ body.dark .preguntas .accordion-container .accordion .accordion-heading {
   background: #111111;
 }
 
-body.dark
-  .preguntas
-  .accordion-container
-  .accordion.active
-  .accordion-heading
-  h3,
-body.dark
-  .preguntas
-  .accordion-container
-  .accordion.active
-  .accordion-heading
-  i {
+body.dark .preguntas .accordion-container .accordion.active .accordion-heading h3,
+body.dark .preguntas .accordion-container .accordion.active .accordion-heading i {
   color: var(--green);
 }
 
-body.dark
-  .preguntas
-  .accordion-container
-  .accordion.active
-  .accordioin-content {
+body.dark .preguntas .accordion-container .accordion.active .accordioin-content {
   color: var(--light-color);
 }
 
-/********************** Modal **********************/
-
+/* Modal */
 body.dark .contenedor-modal {
   background: #111111;
   color: var(--light-color);
@@ -243,11 +215,10 @@ body.dark .boton-cerrar {
   color: var(--white);
 }
 
-/********************** Media Q **********************/
-
+/* Media Queries */
 @media (max-width: 570px) {
   body.dark .skill h5 {
-    background-color: rgb(14, 12, 12);
-    color: #fff;
+      background-color: rgb(14, 12, 12);
+      color: #fff;
   }
 }
