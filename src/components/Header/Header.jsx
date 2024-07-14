@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import DarkMode from '../darkMode/darkMode';
 import { Image } from 'react-bootstrap';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import "./Header.css"
 
 const Header = () => {
@@ -43,19 +44,19 @@ const Header = () => {
                 <Image src={logoSrc} alt="logo" className="header-image" fluid />
             </NavLink>
             <nav className="navbar">
-                <Link to="inicio" spy={true} offset={-150} href="#inicio">
+                <Link to="inicio" spy={true} offset={-150} >
                     <p>Inicio</p>
                 </Link>
-                <Link to="sobre-mi" spy={true} offset={-150} href="#sobre-mi">
+                <Link to="about-me" spy={true} offset={-150}>
                     <p>Sobre Mi</p>
                 </Link>
-                <Link to="servicios" spy={true} offset={-150} href="#servicios">
+                <Link to="services" spy={true} offset={-150}>
                     <p>Servicios</p>
                 </Link>
-                <Link to="proyectos" spy={true} offset={-150} href="#proyectos">
+                <Link to="project" spy={true} offset={-150} >
                     <p>Proyectos</p>
                 </Link>
-                <Link to="contactos" spy={true} offset={-150} href="#contactos">
+                <Link to="contact" spy={true} offset={-150} >
                     <p>Contacto</p>
                 </Link>
                 <div id="buttons">

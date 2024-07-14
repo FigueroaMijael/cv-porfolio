@@ -4,7 +4,7 @@ import Typical from 'react-typical';
 
 const Contact = () => (
 
-    <section className="contactos" id="contactos">
+    <section className="contactos" id="contact">
 
         <h2 className="heading">CONTACTO</h2>
         <h3 className="titulo" data-aos="fade-left" data-aos-delay="300">

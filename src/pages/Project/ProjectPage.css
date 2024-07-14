@@ -1,7 +1,7 @@
 .projects-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 6rem;
   margin-top: 15rem;
 }
 
@@ -18,11 +18,6 @@
   gap: 2rem;
   border-radius: 1rem;
   overflow: hidden;
-}
-
-.project-card:hover {
-  transform: translateY(-0.5rem);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .project-image-container {
@@ -46,9 +41,9 @@
 }
 
 .project-title {
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: bold;
-  color: #333;
+  color: #0a0a0a;
 }
 
 .project-tags {
@@ -56,10 +51,10 @@
 }
 
 .project-tags-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
   list-style: none;
+  display: flex;
+  padding: 0px;
+  gap: 1rem;
 }
 
 .project-tag {
@@ -78,6 +73,8 @@
 .project-tag-icon {
   width: 20px;
   height: 20px;
+  color: white;
+  margin: 0px 5px;
 }
 
 .bg-blue {
@@ -105,25 +102,95 @@
 }
 
 .project-description {
+  font-size: 1.2rem;
   margin-top: 0.5rem;
-  color: #666;
+  color: #010101;
 }
 
 .project-footer {
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   margin-top: 1rem;
 }
 
-.project-link {
+.button-link {
+  background: rgb(113, 113, 113);
+  color: rgb(113, 113, 113);
+  font-size: 1.3em;
+  border-radius: 0.9em;
+  border: 1px solid;
+  letter-spacing: 0.05em;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  color: #0070f3;
-  transition: color 0.3s ease-in-out;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  height: 4rem;
+  width: 15rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-.project-link:hover {
-  color: #0056b3;
+.button-link:hover {
+  background: rgb(71, 71, 71);
+  color: rgb(71, 71, 71);
 }
+
+.project-link {
+  text-decoration: none;
+  color: white;
+}
+
+/* Estilos para dark mode */
+body.dark {
+  background-color: #121212; 
+  color: #ffffff; 
+}
+
+body.dark .projects-title {
+  color: #01d412; 
+}
+
+
+body.dark .project-card:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .project-title {
+  color: #ffffff; 
+}
+
+body.dark .project-tag {
+  background-color: #333333; 
+}
+
+body.dark .bg-blue {
+  background-color: #0056b3; 
+}
+
+body.dark .bg-yellow {
+  background-color: #8f7800; 
+}
+
+body.dark .bg-orange {
+  background-color: #b73d1d; 
+}
+
+body.dark .bg-green {
+  background-color: #017a4a; 
+}
+
+body.dark .project-description {
+  color: #d2d2d2;
+}
+
+body.dark .button-link {
+  color: white;
+}
+
+body.dark .project-link {
+  color: #ffffff;
+  
+}
+

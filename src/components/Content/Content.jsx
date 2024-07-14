@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ParticleHeaderBg from '../ParticlesBackground/ParticlesHeader/ParticleHeaderBg';
-import { Link } from 'react-router-dom';
 import './Content.css';
+import { Link } from 'react-scroll';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Content = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <div className='contenido'>
       <ParticleHeaderBg id="particles-js" />
@@ -48,7 +56,7 @@ const Content = () => {
             </a>
           </div>
 
-          <Link to="sobre-mi" href="#sobre-mi">
+          <Link to="about-me" smooth={true} duration={500}>
             <div className="scroll-down"></div>
           </Link>
         </div>

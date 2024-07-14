@@ -6,31 +6,34 @@ import { Link } from 'react-router-dom'
 const About = () => {
   return (
     <>
-            <section className="sobre-mi-container" id="sobre-mi">
-                <h2 className='heading'>SOBRE MI</h2>
-                <div className="row container">
-                    <div className="columns" data-aos="fade-right" data-aos-delay="300">
-                        <h3>Quien soy</h3>
-                        <h4 >Mi nombre es Mijael Figueroa y soy full stack developer</h4>
-                        <p>Me dedico desde hace 1 año al diseño y desarrollo web, me encuentro en constante aprendizaje de las tecnologías que ya domino, así mismo busco aprender nuevas tecnologías para mejorar mis habilidades y mejorar mis prácticas como desarrollador</p>
-                        <ul>
-                            <li>
-                            <p>Edad: <span>20</span></p>
-                            <p>Email: <span>figueroamijael86@gmail.com</span></p>
-                            <p>Desde: <span>Buenos Aires, Argentina</span></p>
-                            </li>
-                        </ul>
-                        <div className="mas-info">
-                            <a target="_blank" rel="noopener noreferrer"  className="btn-codigo buttonDownload">Descargar CV</a>
-                            <div className='mas-info-btn'>
-                                <Link to="/about">
-                                    <ButtomGet/>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                
-
+            <section className="sobre-mi-container" id="about-me">
+            <h2 className='heading'>SOBRE MI</h2>
+        <div className="row container">
+          <div className="columns" data-aos="fade-right" data-aos-delay="300">
+            <h3>Quien soy</h3>
+            <h4>Mi nombre es Mijael Figueroa y soy full stack developer</h4>
+            <p>Me dedico desde hace 1 año al diseño y desarrollo web, me encuentro en constante aprendizaje de las tecnologías que ya domino, así mismo busco aprender nuevas tecnologías para mejorar mis habilidades y mejorar mis prácticas como desarrollador</p>
+            <ul>
+              <li>
+                <p>Edad: <span>20</span></p>
+                <p>Email: <span>figueroamijael86@gmail.com</span></p>
+                <p>Desde: <span>Buenos Aires, Argentina</span></p>
+              </li>
+            </ul>
+            <div className="mas-info">
+              <a target="_blank" rel="noopener noreferrer" className="btn-codigo buttonDownload">
+                <div className="buttonDownload-content">
+                  <div className="buttonDownload-icon"></div>
+                  <span>Descargar CV</span>
+                </div>
+              </a>
+              <div className='mas-info-btn'>
+                <Link to="/about">
+                  <ButtomGet />
+                </Link>
+              </div>
+            </div>
+          </div>
             <div className="columns col-skill" data-aos="fade-left" data-aos-delay="650">
                 <h3>skills</h3>
                 <h4>Front-End</h4>

@@ -2,9 +2,8 @@ import React from 'react'
 import HeaderPage from '../../components/Header/HeaderPage'
 import ParticlesBackground from '../../components/ParticlesBackground/ParticlesBackground'
 import ScrollToTop from '../../components/ScrollToTop/ScrollToTop'
-import { Link } from 'react-router-dom'
-import ButtomGet from '../../components/ButtonGet/ButtomGet'
 import Footer from '../../components/Footer/Footer'
+import cv from '../../cv/MiCV.pdf'
 
 
 const AboutPage = () => {
@@ -45,7 +44,7 @@ const AboutPage = () => {
                             </li>
                         </ul>
                         <div className="mas-info">
-                            <a target="_blank" rel="noopener noreferrer"  className="btn-codigo buttonDownload">Descargar CV</a>
+                            <a href={cv} target="_blank" rel="noopener noreferrer" download="MiCV.pdf" className="btn-codigo cv buttonDownload">Descargar CV</a>
                             <div className="btn-info">
                                 <div className="custom-btn btn-codigo" id="btn-hide" onClick={readMore}><span>Read more</span></div>
                             </div>

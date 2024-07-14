@@ -1,11 +1,11 @@
 import React from 'react'
 import '../../pages/Service/ServicesPage.css'
-import { Link } from 'react-scroll'
+import { Link } from 'react-router-dom'
 import ButtomGet from '../ButtonGet/ButtomGet'
 
 const Service = () => {
   return (
-        <section className="servicios" id="servicios">
+        <section className="servicios" id="services">
         <h2 className="heading">SERVICES</h2>
         <div className="row">
 

@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import DarkMode from '../darkMode/darkMode';
 import { Image } from 'react-bootstrap';
 import { NavLink, Link } from 'react-router-dom';
 import "./Header.css"
 
 const HeaderPage = () => {
+
+    const [logoSrc, setLogoSrc] = useState("./src/img/logo/54345976_transparent_edit.png");
+
+    useEffect(() => {
+        const theme = localStorage.getItem("theme");
+        if (theme === "dark") {
+            setLogoSrc("./src/img/logo/9003b4f9-9098-4311-8259-c27f188b937a.png");
+        }
+    }, []);
+
+    const handleThemeChange = (theme) => {
+        if (theme === "dark") {
+            setLogoSrc("./src/img/logo/9003b4f9-9098-4311-8259-c27f188b937a.png");
+        } else {
+            setLogoSrc("./src/img/logo/54345976_transparent_edit.png");
+        }
+    };
 
   const menuDesplegable = () => {
       let navbar = document.querySelector('.navbar');
@@ -23,9 +40,9 @@ const HeaderPage = () => {
       <header className="site-header">
           <div id="menu-btn"  onClick={menuDesplegable}><i class="bi bi-list"></i></div>
 
-          <NavLink className="logo" to="/">
-            <Image src="./src/img/logo/54345976_transparent_edit.png" alt="logo" className="header-image" fluid />
-          </NavLink>
+            <NavLink className="logo" to="/">
+                <Image src={logoSrc} alt="logo" className="header-image" fluid />
+            </NavLink>
 
           <nav className="navbar">
               <Link to="inicio" spy={true} offset={-150} href="#inicio">
@@ -49,7 +66,7 @@ const HeaderPage = () => {
               </div>
           </nav>
           <div className="switch" id="switch">
-              <DarkMode />
+              <DarkMode onThemeChange={handleThemeChange}/>
           </div>
       </header>
   )
