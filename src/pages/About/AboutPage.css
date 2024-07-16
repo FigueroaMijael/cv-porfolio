@@ -1,3 +1,5 @@
+
+
 .buttonDownload {
     display: flex;
     position: relative;
@@ -160,6 +162,7 @@ section .row .columns .mas-info{
 
 .mas-info-btn{
     display: flex;
+    list-style: none;
 }
 
 .sobre-mi .row .columns a{
@@ -287,6 +290,8 @@ section .row .columns .skill img:hover {
     background: var(--white);
     color: var(--black);
 }
+
+.mas-info-btn
 
 
 /********************** Skill page **********************/

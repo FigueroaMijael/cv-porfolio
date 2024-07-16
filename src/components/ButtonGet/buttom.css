@@ -36,6 +36,7 @@
     box-shadow: 0.1em 0.1em 0.6em 0.2em var(--green);
     right: 0.3em;
     transition: all 0.3s;
+    text-decoration: none;
 }
 
 body.dark .cssbuttons-io-button .icon {

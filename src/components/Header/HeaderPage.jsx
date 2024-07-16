@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import DarkMode from '../darkMode/darkMode';
 import { Image } from 'react-bootstrap';
-import { NavLink, Link } from 'react-router-dom';
-import "./Header.css"
+import { Link } from 'react-router-dom';
+import "./Header.css";
 
 const HeaderPage = () => {
 
@@ -23,53 +23,55 @@ const HeaderPage = () => {
         }
     };
 
-  const menuDesplegable = () => {
-      let navbar = document.querySelector('.navbar');
-      navbar.classList.toggle("activar");
+    const menuDesplegable = () => {
+        let navbar = document.querySelector('.navbar');
+        navbar.classList.toggle("activar");
 
-      window.onscroll = () => {
-          if (window.scrollY > 0) {
-              document.querySelector(".site-header").classList.add("activar")
-          } else document.querySelector(".site-header").classList.remove("activar")
+        window.onscroll = () => {
+            if (window.scrollY > 0) {
+                document.querySelector(".site-header").classList.add("activar");
+            } else {
+                document.querySelector(".site-header").classList.remove("activar");
+            }
 
-          navbar.classList.remove("activar")
-      }
-  }
+            navbar.classList.remove("activar");
+        }
+    };
 
-  return (
-      <header className="site-header">
-          <div id="menu-btn"  onClick={menuDesplegable}><i class="bi bi-list"></i></div>
+    return (
+        <header className="site-header">
+            <div id="menu-btn" onClick={menuDesplegable}><i className="bi bi-list"></i></div>
 
-            <NavLink className="logo" to="/">
+            <Link className="logo" to="/">
                 <Image src={logoSrc} alt="logo" className="header-image" fluid />
-            </NavLink>
+            </Link>
 
-          <nav className="navbar">
-              <Link to="inicio" spy={true} offset={-150} href="#inicio">
-                  <p>Inicio</p>
-              </Link>
-              <Link to="sobre-mi" spy={true} offset={-150} href="#sobre-mi">
-                  <p>Sobre Mi</p>
-              </Link>
-              <Link to="servicios" spy={true} offset={-150} href="#servicios">
-                  <p>Servicios</p>
-              </Link>
-              <Link to="proyectos" spy={true} offset={-150} href="#proyectos">
-                  <p>Proyectos</p>
-              </Link>
-              <Link to="contactos" spy={true} offset={-150} href="#contactos">
-                  <p>Contacto</p>
-              </Link>
-              <div id="buttons">
-                  <img onClick={() => idioma.selectLanguage('en-US')} src="https://nahuel61920.github.io/Portafoliovirtual/img/en.png" alt="EEUU" />
-                  <img onClick={() => idioma.selectLanguage('es-ES')} src="https://nahuel61920.github.io/Portafoliovirtual/img/es.png" alt="España" />
-              </div>
-          </nav>
-          <div className="switch" id="switch">
-              <DarkMode onThemeChange={handleThemeChange}/>
-          </div>
-      </header>
-  )
-}
+            <nav className="navbar">
+                <Link to="/#inicio">
+                    <p>Inicio</p>
+                </Link>
+                <Link to="/#about-me">
+                    <p>Sobre Mi</p>
+                </Link>
+                <Link to="/#services">
+                    <p>Servicios</p>
+                </Link>
+                <Link to="/#project">
+                    <p>Proyectos</p>
+                </Link>
+                <Link to="/#contact">
+                    <p>Contacto</p>
+                </Link>
+                <div id="buttons">
+                    <img onClick={() => idioma.selectLanguage('en-US')} src="https://nahuel61920.github.io/Portafoliovirtual/img/en.png" alt="EEUU" />
+                    <img onClick={() => idioma.selectLanguage('es-ES')} src="https://nahuel61920.github.io/Portafoliovirtual/img/es.png" alt="España" />
+                </div>
+            </nav>
+            <div className="switch" id="switch">
+                <DarkMode onThemeChange={handleThemeChange} />
+            </div>
+        </header>
+    );
+};
 
 export default HeaderPage;

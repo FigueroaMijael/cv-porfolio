@@ -28,7 +28,7 @@ const About = () => {
                 </div>
               </a>
               <div className='mas-info-btn'>
-                <Link to="/about">
+                <Link className='' to="/about">
                   <ButtomGet />
                 </Link>
               </div>

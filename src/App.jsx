@@ -6,8 +6,6 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import AboutPage from './pages/About/AboutPage'
 import ServicesPage from './pages/Service/ServicesPage'
-import ProjectPage from './pages/Project/ProjectPage'
-
 
 //Scroll
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
@@ -42,9 +40,7 @@ function App() {
                       <Route exact path="/" element={<Home />}></Route>
                       <Route exact path="/about" element={<AboutPage />}></Route>
                       <Route exact path="/services" element={<ServicesPage />}></Route>
-                      <Route exact path="/project" element={<ProjectPage />}></Route>
                   </Routes>
-
           }
 
       </>

@@ -51,7 +51,7 @@
 
 .site-services .row{
     display: grid;
-    grid-template-columns: repeat(2, 33%);
+    grid-template-columns: repeat(3, 33%);
     text-align: center;
     justify-content: center!important;
     margin: 2rem auto;
@@ -75,11 +75,7 @@
     color: var(--black);
 }
 
-.site-services .columns .numero span {
-    position: relative;
-    font-size: 2.5rem;
-    top: 7rem;
-}
+
 
 .site-services .columns .numero{
     font-size: 5rem;
@@ -133,72 +129,91 @@
 .preguntas .accordion-container {
     max-width: 70rem;
     margin: 0 auto;
-}
-
-.preguntas .accordion-container .accordion {
+  }
+  
+  .preguntas .accordion-container .accordion {
     background: #fff;
     margin-bottom: 1.5rem;
-    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-}
-
-.preguntas .accordion-container .accordion:last-child {
-    margin-bottom: .5rem;
-}
-
-.preguntas .accordion-container .accordion.active .accordion-heading {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+  
+  .preguntas .accordion-container .accordion:last-child {
+    margin-bottom: 0.5rem;
+  }
+  
+  .preguntas .accordion-container .accordion.active .accordion-heading {
     background: var(--black);
-}
-
-.preguntas .accordion-container .accordion.active .accordion-heading h3 {
+  }
+  
+  .preguntas .accordion-container .accordion.active .accordion-heading h3 {
     color: var(--white);
-}
-
-.preguntas .accordion-container .accordion.active .accordion-heading i {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+  }
+  
+  .preguntas .accordion-container .accordion.active .accordion-heading i {
+    transform: rotate(180deg);
     color: var(--white);
-}
-
-.preguntas .accordion-container .accordion.active .accordioin-content {
+  }
+  
+  .preguntas .accordion-container .accordion.active .accordion-content {
     display: block;
     color: var(--black);
-}
-
-.preguntas .accordion-container .accordion .accordion-heading {
+  }
+  
+  .preguntas .accordion-container .accordion .accordion-heading {
     padding: 2rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 1rem;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
     background: var(--white);
     cursor: pointer;
-}
-
-.preguntas .accordion-container .accordion .accordion-heading h3,
-.preguntas .accordion-container .accordion .accordion-heading i {
+  }
+  
+  .preguntas .accordion-container .accordion .accordion-heading h3,
+  .preguntas .accordion-container .accordion .accordion-heading i {
     font-size: 2rem;
     color: var(--black);
-    text-transform: none;
-}
-
-.preguntas .accordion-container .accordioin-content {
+  }
+  
+  .preguntas .accordion-container .accordion .accordion-content {
     padding: 2rem;
     font-size: 1.5rem;
     line-height: 2;
     color: #666;
-    text-transform: none;
     display: none;
-    -webkit-animation: fadeIn .2s linear;
-            animation: fadeIn .2s linear;
-}
-
+    animation: fadeIn 0.2s linear;
+  }
+  
+  .preguntas .accordion-container .accordion.active .accordion-content {
+    display: block;
+  }
+  
+  /*****************  Acordion **************/
+  .cm-icon2 {
+    color: var(--black);
+    font-size: 20px;
+    float: right;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /********************** Media Q **********************/
+  @media (max-width: 760px) {
+    .site-services .row {
+      grid-template-columns: 90%;
+    }
+    
+    .site-services .row .columns {
+      transform: scale(1) !important;
+    }
+  
+    .site-services .row .recomendado {
+      transform: scale(1) !important;
+    }
+  }
+  
 
 /********************** Media Q **********************/
 

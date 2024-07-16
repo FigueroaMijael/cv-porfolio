@@ -74,17 +74,17 @@ const PROJECTS = [
 ];
 
 const Projects = () => (
-  <div className="projects-container" id='project'>
-    <h2 className="projects-title">{"</>"} Proyectos</h2>
+  <div className="projects-container" id='project' >
+    <h2 className="projects-title" data-aos="fade-up" data-aos-delay="100">{"</>"} Proyectos</h2>
     {PROJECTS.map(({ image, title, description, tags, link, github }) => (
       <article key={title} className="project-card">
-        <div className="project-image-container">
+        <div className="project-image-container" data-aos="fade-up" data-aos-delay="200">
           <img alt={title} className="project-image" loading="lazy" src={image} />
         </div>
         <div className="project-info">
-          <h3 className="project-title">{title}</h3>
+          <h3 className="project-title" data-aos="fade-up" data-aos-delay="200">{title}</h3>
           <div className="project-tags">
-            <ul className="project-tags-list">
+            <ul className="project-tags-list" data-aos="fade-up" data-aos-delay="300">
               {tags.map((tag) => (
                 <li key={tag.name}>
                   <span className={`project-tag ${tag.class}`}>
@@ -95,8 +95,8 @@ const Projects = () => (
               ))}
             </ul>
           </div>
-          <div className="project-description">{description}</div>
-          <footer className="project-footer">
+          <div className="project-description" data-aos="fade-up" data-aos-delay="200">{description}</div>
+          <footer className="project-footer" data-aos="fade-up" data-aos-delay="300">
             {github && (
               <button className="button-link">
                 <a href={github} className="project-link">
