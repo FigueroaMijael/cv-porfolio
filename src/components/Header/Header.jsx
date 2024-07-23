@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import DarkMode from '../darkMode/darkMode';
 import { Image } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
 import "./Header.css"
 
@@ -40,9 +39,9 @@ const Header = () => {
     return (
         <header className="site-header">
             <div id="menu-btn" onClick={menuDesplegable}><i class="bi bi-list"></i></div>
-            <NavLink className="logo" to="/">
+            <Link className="logo" to="inicio">
                 <Image src={logoSrc} alt="logo" className="header-image" fluid />
-            </NavLink>
+            </Link>
             <nav className="navbar">
                 <Link to="inicio" spy={true} offset={-150} >
                     <p>Inicio</p>

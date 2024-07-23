@@ -30,25 +30,25 @@ const Content = () => {
           </div>
 
           <div className="wrapper">
-            <a className="button" href="" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1200">
+            <a className="button" href="https://www.linkedin.com/in/mijael-figueroa-019952249/" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1200">
               <div className="icon">
                 <i className="bi bi-linkedin"></i>
               </div>
               <span>Linkedin</span>
             </a>
-            <a className="button" href="" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1400">
+            <a className="button" href="https://github.com/FigueroaMijael" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1400">
               <div className="icon">
                 <i className="bi bi-github"></i>
               </div>
               <span>Github</span>
             </a>
-            <a className="button" href="" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1600">
+            <a className="button" href="https://www.instagram.com/figuee15_/" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1600">
               <div className="icon">
                 <i className="bi bi-instagram"></i>
               </div>
               <span>Instagram</span>
             </a>
-            <a className="button" href="" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1800">
+            <a className="button" href="https://api.whatsapp.com/send?phone=541141974731" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1800">
               <div className="icon">
                 <i className="bi bi-whatsapp"></i>
               </div>

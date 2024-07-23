@@ -1,109 +1,149 @@
-
-
 .buttonDownload {
-    display: flex;
-    position: relative;
-    padding: 10px 25px;
-    background-color: transparent;
-    color: var(--black);
-    text-decoration: none;
-    font-size: 1.5rem;
-    text-align: center;
+	display: flex;
+	position: relative;
+	padding: 10px 25px;
+	background-color: transparent;
+	color: var(--black);
+	text-decoration: none;
+	font-size: 1.5rem;
+	text-align: center;
     align-items: center;
-    text-indent: 15px;
+	text-indent: 15px;
     font-weight: 700;
     white-space: pre;
-    box-shadow: 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
-      4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-    letter-spacing: 0.1em;
-    margin-bottom: 1rem;
-  }
-  
-  .buttonDownload-content {
-    display: flex;
+    box-shadow: 7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+}
+
+.buttonDownload2 {
+	display: flex;
+	position: relative;
+	padding: 10px 25px;
+	background-color: transparent;
+	color: var(--white);
+	text-decoration: none;
+	font-size: 1.5rem;
+	text-align: center;
     align-items: center;
-  }
-  
-  .buttonDownload-icon {
-    margin-right: 10px;
-  }
-  
-  body.dark .buttonDownload {
+	text-indent: 15px;
+    font-weight: 700;
+    white-space: pre;
+    box-shadow: 7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+}
+
+
+body.dark .buttonDownload {
     background-color: transparent;
     box-shadow: none;
-  }
-  
-  .buttonDownload:hover {
-    background-color: var(--black);
-    color: white;
-  }
-  
-  body.dark .buttonDownload:hover {
+}
+
+.buttonDownload:hover {
+	background-color: var(--black);
+	color: white;
+}
+
+body.dark .buttonDownload:hover {
     background-color: white;
-  }
-  
-  .buttonDownload:before, .buttonDownload:after {
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 15px;
-    top: 52%;
-  }
-  
-  .buttonDownload:before {
-    width: 10px;
-    height: 2px;
-    border-style: solid;
-    border-width: 0 2px 2px;
-  }
-  
-  .buttonDownload:after {
-    width: 0;
-    height: 0;
-    margin-left: 3px;
-    margin-top: -7px;
-    border-style: solid;
-    border-width: 4px 4px 0 4px;
-    border-color: transparent;
-    border-top-color: inherit;
-    animation: downloadArrow 2s linear infinite;
-    animation-play-state: paused;
-  }
-  
-  .buttonDownload:hover:before {
-    border-color: #4CC713;
-  }
-  
-  .buttonDownload:hover:after {
-    border-top-color: #4CC713;
-    animation-play-state: running;
-  }
-  
-  @keyframes downloadArrow {
-    0% {
-      margin-top: -7px;
-      opacity: 1;
-    }
-    
-    0.001% {
-      margin-top: 3px;
-      opacity: 0;
-    }
-    
-    50% {
-      opacity: 0;
-    }
-    
-    50.001% {
-      margin-top: -7px;
-      opacity: 1;
-    }
-    
-    100% {
-      margin-top: 3px;
-      opacity: 0;
-    }
-  }
+}
+
+.buttonDownload:before, .buttonDownload:after {
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 15px;
+	top: 52%;
+}
+
+.buttonDownload2:before, .buttonDownload2:after {
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 15px;
+	top: 52%;
+}
+/* Download box shape  */
+.buttonDownload:before {
+	width: 10px;
+	height: 2px;
+	border-style: solid;
+	border-width: 0 2px 2px;
+}
+
+.buttonDownload2:before {
+	width: 10px;
+	height: 2px;
+	border-style: solid;
+	border-width: 0 2px 2px;
+}
+
+/* Download arrow shape */
+.buttonDownload:after {
+	width: 0;
+	height: 0;
+	margin-left: 2px;
+	margin-top: -5px;
+	border-style: solid;
+	border-width: 4px 4px 0 4px;
+	border-color: transparent;
+	border-top-color: inherit;
+	animation: downloadArrow 2s linear infinite;
+	animation-play-state: paused;
+}
+
+.buttonDownload2:after {
+	width: 0;
+	height: 0;
+	margin-left: 2px;
+	margin-top: -5px;
+	border-style: solid;
+	border-width: 4px 4px 0 4px;
+	border-color: transparent;
+	border-top-color: inherit;
+	animation: downloadArrow 2s linear infinite;
+	animation-play-state: paused;
+}
+
+.buttonDownload:hover:before {
+	border-color: #4CC713;
+}
+
+.buttonDownload:hover:after {
+	border-top-color: #4CC713;
+	animation-play-state: running;
+}
+
+.buttonDownload2:hover:before {
+	border-color: #4CC713;
+}
+
+.buttonDownload2:hover:after {
+	border-top-color: #4CC713;
+	animation-play-state: running;
+}
+
+/* keyframes for the download icon anim */
+@keyframes downloadArrow {
+	/* 0% and 0.001% keyframes used as a hackish way of having the button frozen on a nice looking frame by default */
+	0% {
+		margin-top: -7px;
+		opacity: 1;
+	}
+	
+	0.001% {
+		margin-top: -15px;
+		opacity: 0;
+	}
+	
+	50% {
+		opacity: 1;
+	}
+	
+	100% {
+		margin-top: 0;
+		opacity: 0;
+	}
+}
 
 section .row{
     display: grid;
@@ -162,7 +202,6 @@ section .row .columns .mas-info{
 
 .mas-info-btn{
     display: flex;
-    list-style: none;
 }
 
 .sobre-mi .row .columns a{
@@ -222,34 +261,9 @@ section .row .columns .skill img:hover {
 }
 
 .sobre-mi-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.sobre-mi-container .heading {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.sobre-mi-container .row {
-    display: flex;
-    flex-direction: row;
-    width: 100%; /* Ocupa todo el ancho del contenedor */
-}
-
-.sobre-mi-container .columns {
-    flex: 1; /* Permite que las columnas ocupen el mismo espacio */
-    padding: 10px; /* Espacio interno en las columnas */
-}
-
-.sobre-mi-container .columns.col-skill {
-    padding-left: 20px; /* Ajusta según sea necesario */
-}
-
-.sobre-mi-container .columns .skill {
-    display: flex;
-    flex-wrap: wrap; /* Ajusta para envolver contenido si es necesario */
+    display: grid;
+    grid-template-columns: 30% 68%;
+    grid-gap: 2rem;
 }
 
 .sobre-mi-img-container{
@@ -291,8 +305,6 @@ section .row .columns .skill img:hover {
     color: var(--black);
 }
 
-.mas-info-btn
-
 
 /********************** Skill page **********************/
 
@@ -325,6 +337,32 @@ section .row .columns .skill img:hover {
     text-transform: none;
 }
 
+/* src/components/Certificados.css */
+.certificados {
+    padding: 20px;
+    background-color: transparent;
+  }
+  
+  .certificados h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .certificados-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  .certificados-grid img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+  }
+  
 /********************** Media Q **********************/
 
 @media (max-width: 990px) {

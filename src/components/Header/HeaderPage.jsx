@@ -42,7 +42,7 @@ const HeaderPage = () => {
         <header className="site-header">
             <div id="menu-btn" onClick={menuDesplegable}><i className="bi bi-list"></i></div>
 
-            <Link className="logo" to="/">
+            <Link className="logo" to="/#inicio">
                 <Image src={logoSrc} alt="logo" className="header-image" fluid />
             </Link>
 

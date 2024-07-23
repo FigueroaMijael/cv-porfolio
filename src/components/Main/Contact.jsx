@@ -25,7 +25,7 @@ const Contact = () => (
         </h3>
 
         <div className="icons">
-            <a href="mail to:figueroamijael86@gmail.com" target="_blank" rel="noopener noreferrer" data-aos="zoom-in">
+            <a href="mailto:figueroamijael86@gmail.com" target="_blank" rel="noopener noreferrer" data-aos="zoom-in">
                 <div className="layer">
                     <span></span>
                     <span></span>
@@ -37,7 +37,7 @@ const Contact = () => (
                     Gmail
                 </div>
             </a>
-            <a href="" target="_blank" rel="noopener noreferrer" data-aos="zoom-in">
+            <a href="https://api.whatsapp.com/send?phone=541141974731" target="_blank" rel="noopener noreferrer" data-aos="zoom-in">
                 <div className="layer">
                     <span></span>
                     <span></span>
@@ -49,7 +49,7 @@ const Contact = () => (
                     Whatsapp
                 </div>
             </a>
-            <a href="" target="_blank" rel="noopener noreferrer" data-aos="zoom-in">
+            <a href="https://www.instagram.com/figuee15_/" target="_blank" rel="noopener noreferrer" data-aos="zoom-in">
                 <div className="layer">
                     <span></span>
                     <span></span>
@@ -73,7 +73,7 @@ const Contact = () => (
                     telegram
                 </div>
             </a>
-            <a href="" target="_blank" rel="noopener noreferrer" data-aos="zoom-in">
+            <a href="https://github.com/FigueroaMijael" target="_blank" rel="noopener noreferrer" data-aos="zoom-in">
                 <div className="layer">
                     <span></span>
                     <span></span>
@@ -85,7 +85,7 @@ const Contact = () => (
                     Linkedin
                 </div>
             </a>
-            <a href="" target="_blank" rel="noopener noreferrer" data-aos="zoom-in">
+            <a href="https://www.linkedin.com/in/mijael-figueroa-019952249/" target="_blank" rel="noopener noreferrer" data-aos="zoom-in">
                 <div className="layer">
                     <span></span>
                     <span></span>
