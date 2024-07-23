@@ -1,6 +1,6 @@
 {
   "name": "porfolio",
-  "private": true,
+  "homepage": "https://figueroamijael.github.io/cv-porfolio/dist",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -8,9 +8,7 @@
     "build": "vite build",
     "start": "vite",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "predeploy": "vite build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@tsparticles/react": "^3.0.0",
@@ -39,6 +37,5 @@
   },
   "resolutions": {
     "react-typical/react": "^18.2.0"
-  },
-  "homepage": "https://figueroamijael.github.io/cv-porfolio/"
+  }
 }
