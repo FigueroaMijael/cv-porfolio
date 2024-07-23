@@ -3,22 +3,24 @@ import DarkMode from '../darkMode/darkMode';
 import { Image } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 import "./Header.css"
+import logo from '../../img/logo/54345976_transparent_edit.png'
+import logoDark from "../../img/logo/9003b4f9-9098-4311-8259-c27f188b937a.png"
 
 const Header = () => {
-    const [logoSrc, setLogoSrc] = useState("./src/img/logo/54345976_transparent_edit.png");
+    const [logoSrc, setLogoSrc] = useState(logo);
 
     useEffect(() => {
         const theme = localStorage.getItem("theme");
         if (theme === "dark") {
-            setLogoSrc("./src/img/logo/9003b4f9-9098-4311-8259-c27f188b937a.png");
+            setLogoSrc(logoDark);
         }
     }, []);
 
     const handleThemeChange = (theme) => {
         if (theme === "dark") {
-            setLogoSrc("./src/img/logo/9003b4f9-9098-4311-8259-c27f188b937a.png");
+            setLogoSrc(logoDark);
         } else {
-            setLogoSrc("./src/img/logo/54345976_transparent_edit.png");
+            setLogoSrc(logo);
         }
     };
 

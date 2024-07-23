@@ -3,6 +3,10 @@ import '../../pages/Project/ProjectPage.css';
 import JavaScript from '../Icons/JavaScript';
 import ReactJS from '../Icons/React';
 import MongoDB from '../Icons/Mongo';
+import proyectoUno from '../../img/project/FormulawebProject.png'
+import proyectoDos from '../../img/project/ProgrammingProject.png'
+import proyectoTres from '../../img/project/E-ecommersBackend.png'
+
 
 const TAGS = {
   REACT: {
@@ -52,7 +56,7 @@ const PROJECTS = [
     description: "Web informativa del deporte numero uno del automivilismo. Donde podes conocer las ultimas novedades sobre tu piloto u equipo favorito del campeonato. Creada desde cero con solo HTML y CSS.",
     link: "https://figueroamijael.github.io/FormulaWeb/",
     github: "https://github.com/FigueroaMijael/FormulaWeb.git",
-    image: "./src/img/project/FormulawebProject.png",
+    image: proyectoUno,
     tags: [TAGS.HTML5, TAGS.CSS],
   },
   {
@@ -60,7 +64,7 @@ const PROJECTS = [
     description: "'Programming' es un E-commerse diseñado puramente con Java Script. El cual te deja simular un proceso simple de compra.",
     link: "https://figueroamijael.github.io/proyecto-js-2/",
     github: "https://github.com/FigueroaMijael/proyecto-js-2.git",
-    image: "./src/img/project/ProgrammingProject.png",
+    image: proyectoDos,
     tags: [TAGS.JAVASCRIPT],
   },
   {
@@ -68,7 +72,7 @@ const PROJECTS = [
     description: "'Back-Commerse' es un E-commerse de flujo completo. Este permite registrar y loguear usuarios guardando cada movimiento en la base de dato (nuevo usuario, rol, ultimo inicio, etc). Posee vista de perfil del usuario con su custom de configuracion y un chat para que interactuen los usuarios en tiempo real. Los diferentes roles permiten distintas funciones segun el usuario. Permite visualizar productos, ver su detalle, agregar al carrito, visualizar el carrito, finalizar el proceso de compras mediante el check-in de Mercado pago, recibe un comprobante con el id y detalle de la compra.",
     link: "https://myproyectfinals-production.up.railway.app",
     github: "https://github.com/FigueroaMijael/MyProyectFinals.git",
-    image: "./src/img/project/E-ecommersBackend.png",
+    image: proyectoTres,
     tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.MONGODB],
   },
 ];

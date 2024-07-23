@@ -2,8 +2,6 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { useEffect, useMemo, useState } from "react";
 import { loadSlim } from "@tsparticles/slim"; 
 
-
-
 const ParticlesComponent = (props) => {
 
   const [init, setInit] = useState(false);
@@ -20,11 +18,11 @@ const ParticlesComponent = (props) => {
     console.log(container);
   };
 
-
   const options = useMemo(
     () => ({
       fpsLimit: 120,
       interactivity: {
+        detect_on: "canvas",
         events: {
           onClick: {
             enable: true,
@@ -34,16 +32,43 @@ const ParticlesComponent = (props) => {
             enable: true,
             mode: 'grab',
           },
+          onhover: {
+            enable: false,
+            mode: "grab"
+          },
+          onclick: {
+            enable: false,
+            mode: "push"
+          },
+          resize: true
         },
         modes: {
           push: {
             distance: 200,
             duration: 15,
+            particles_nb: 4
           },
           grab: {
             distance: 150,
+            line_linked: {
+              opacity: 1
+            }
           },
-        },
+          bubble: {
+            distance: 400,
+            size: 40,
+            duration: 2,
+            opacity: 8,
+            speed: 3
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4
+          },
+          remove: {
+            particles_nb: 2
+          }
+        }
       },
       particles: {
         number: {
@@ -113,50 +138,10 @@ const ParticlesComponent = (props) => {
           }
         }
       },
-      interactivity: {
-        detect_on: "canvas",
-        events: {
-          onhover: {
-            enable: false,
-            mode: "grab"
-          },
-          onclick: {
-            enable: false,
-            mode: "push"
-          },
-          resize: true
-        },
-        modes: {
-          grab: {
-            distance: 400,
-            line_linked: {
-              opacity: 1
-            }
-          },
-          bubble: {
-            distance: 400,
-            size: 40,
-            duration: 2,
-            opacity: 8,
-            speed: 3
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.4
-          },
-          push: {
-            particles_nb: 4
-          },
-          remove: {
-            particles_nb: 2
-          }
-        }
-      },
       retina_detect: true
     }),
     [],
   );
-
 
   return <Particles className="particles-css" id={props.id} init={particlesLoaded} options={options} />; 
 };
