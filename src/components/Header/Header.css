@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 8%;
+  padding: 2rem 3rem;
 }
 
 .site-header .header-image {
@@ -32,6 +32,7 @@
 
 #buttons {
   display: inline-block;
+  margin-left: 4rem ;
 }
 
 #buttons img {
@@ -48,10 +49,10 @@
   content: "";
   height: 3px;
   width: 0;
-  background: var(--green);
+  background: green;
   position: absolute;
   left: 0;
-  bottom: 0.5rem;
+  bottom: -0.6rem;
   transition: 0.4s ease-out;
 }
 
@@ -64,10 +65,10 @@
   content: "";
   height: 3px;
   width: 100%;
-  background: var(--secundario);
+  background: green;
   position: absolute;
   left: 0;
-  bottom: -1.2rem;
+  bottom: -0.6rem;
   transition: 0.4s ease-out;
 }
 

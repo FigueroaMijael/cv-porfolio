@@ -1,4 +1,3 @@
-import React from 'react';
 import LinkInline from './LinkInLine';
 import './Experience.css'
 

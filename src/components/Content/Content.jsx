@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import ParticleHeaderBg from '../ParticlesBackground/ParticlesHeader/ParticleHeaderBg';
 import './Content.css';
 import { Link } from 'react-scroll';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useTranslation } from '../../Context/Languaje-context';
 
 const Content = () => {
   useEffect(() => {
@@ -12,15 +13,17 @@ const Content = () => {
     });
   }, []);
 
+  const { translate } = useTranslation(); // Usa el contexto
+
   return (
     <div className='contenido'>
       <ParticleHeaderBg id="particles-js" />
 
       <section className="inicio" id="inicio">
         <div className="titulo">
-          <p data-aos="fade-up" data-aos-delay="600">Hola</p>
-          <h1 data-aos="fade-up" data-aos-delay="800">Soy Mijael Figueroa</h1>
-          <p data-aos="fade-up" data-aos-delay="1000">Full-Stack Developer</p>
+          <p data-aos="fade-up" data-aos-delay="600">{translate('hello')}</p>
+          <h1 data-aos="fade-up" data-aos-delay="800">{translate('iam')}</h1>
+          <p data-aos="fade-up" data-aos-delay="1000">{translate('occupation')}</p>
 
           <div className="redes-sociales">
             <a href="https://www.linkedin.com/in/mijael-figueroa-019952249/" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1200"><i className="bi bi-linkedin"></i></a>

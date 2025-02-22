@@ -1,15 +1,18 @@
-import React from 'react'
 import './Footer.css'
+import { useTranslation } from '../../Context/Languaje-context';
+
 
 
 const Footer = () =>{
     let fecha = new Date().getFullYear();
 
+    const { translate } = useTranslation(); // Usa el contexto
+
     return (
         <footer className="footer">
             <div className="site-footer">
                 <div className="copyright">
-                    <p>Pagina creada por: 'Figueroa Mijael'</p>
+                    <p>{translate('createPage')}</p>
                     <p>&copy; {fecha}. All Rights Reserved.</p>
                 </div>
                 <div className="redes-sociales">

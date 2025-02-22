@@ -3,30 +3,33 @@ import '../../pages/About/AboutPage.css'
 import ButtomGet from '../ButtonGet/ButtomGet'
 import { Link } from 'react-router-dom'
 import micv from '../../cv/MiCV.pdf'
-
+import { useTranslation } from '../../Context/Languaje-context';
 
 const About = () => {
+
+const { translate } = useTranslation(); // Usa el contexto
+
   return (
     <>
             <section className="sobre-mi" id="about-me">
-            <h2 className='heading'>SOBRE MI</h2>
+            <h2 className='heading'>{translate('aboutme')}</h2>
         <div className="row container">
           <div className="columns" data-aos="fade-right" data-aos-delay="300">
-            <h3>Quien soy</h3>
-            <h4>Mi nombre es Mijael Figueroa y soy full stack developer</h4>
-            <p>Me dedico desde hace 1 año al diseño y desarrollo web, me encuentro en constante aprendizaje de las tecnologías que ya domino, así mismo busco aprender nuevas tecnologías para mejorar mis habilidades y mejorar mis prácticas como desarrollador.</p>
+            <h3>{translate('who')}</h3>
+            <h4>{translate('am')}</h4>
+            <p>{translate('description')}</p>
             <ul>
               <li>
-                <p>Edad: <span>20</span></p>
+                <p>{translate('age')} <span>20</span></p>
                 <p>Email: <span>figueroamijael86@gmail.com</span></p>
-                <p>Desde: <span>Buenos Aires, Argentina</span></p>
+                <p>{translate('from')} <span>Buenos Aires, Argentina</span></p>
               </li>
             </ul>
             <div className="mas-info">
               <a href={micv} download="MiCV.pdf" target="_blank" rel="noopener noreferrer" className="btn-codigo buttonDownload">
                 <div className="buttonDownload-content">
                   <div className="buttonDownload-icon"></div>
-                  <span>Descargar CV</span>
+                  <span>{translate('downloadcv')}</span>
                 </div>
               </a>
               <div className='mas-info-btn'>
@@ -154,7 +157,7 @@ const About = () => {
                     </div>
                 </div>
 
-                <h4>Herramientas</h4>
+                <h4>{translate("tools")}</h4>
                 <div className="skill">
                     <div>
                         <svg className="icons-skils" width="54" height="80" viewBox="0 0 54 80" fill="none" xmlns="http://www.w3.org/2000/svg">
