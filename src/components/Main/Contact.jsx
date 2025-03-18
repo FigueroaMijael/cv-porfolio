@@ -1,12 +1,15 @@
-import React from 'react';
 import '../../pages/Contact/ContactPage.css'
 import Typical from 'react-typical';
+import { useTranslation } from '../../Context/Languaje-context';
 
-const Contact = () => (
+const Contact = () => {
 
-    <section className="contactos" id="contact">
+    const { translate } = useTranslation(); // Usa el contexto
+    
+    return (
+        <section className="contactos" id="contact">
 
-        <h2 className="heading">CONTACTO</h2>
+        <h2 className="heading">{translate("contact")}</h2>
         <h3 className="titulo" data-aos="fade-left" data-aos-delay="300">
             Contactame por: 
             <Typical
@@ -99,6 +102,7 @@ const Contact = () => (
             </a>
         </div>
     </section>
-);
+    )
+};
 
 export default Contact;

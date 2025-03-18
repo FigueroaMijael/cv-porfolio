@@ -1,4 +1,3 @@
-import React from 'react';
 import '../../pages/Project/ProjectPage.css'; 
 import JavaScript from '../Icons/JavaScript';
 import ReactJS from '../Icons/React';
@@ -6,6 +5,8 @@ import MongoDB from '../Icons/Mongo';
 import proyectoUno from '../../img/project/FormulawebProject.png'
 import proyectoDos from '../../img/project/ProgrammingProject.png'
 import proyectoTres from '../../img/project/E-ecommersBackend.png'
+import { useTranslation } from '../../Context/Languaje-context';
+
 
 
 const TAGS = {
@@ -51,9 +52,10 @@ const TAGS = {
 };
 
 const PROJECTS = [
+  
   {
     title: "Formula One Web",
-    description: "Web informativa del deporte numero uno del automivilismo. Donde podes conocer las ultimas novedades sobre tu piloto u equipo favorito del campeonato. Creada desde cero con solo HTML y CSS.",
+    description: "{translate('formulawed')}",
     link: "https://figueroamijael.github.io/FormulaWeb/",
     github: "https://github.com/FigueroaMijael/FormulaWeb.git",
     image: proyectoUno,
@@ -77,9 +79,12 @@ const PROJECTS = [
   },
 ];
 
+
 const Projects = () => (
+
+  
   <div className="projects-container" id='project' >
-    <h2 className="projects-title" data-aos="fade-up" data-aos-delay="100">{"</>"} Proyectos</h2>
+    <h2 className="projects-title" data-aos="fade-up" data-aos-delay="100">Proyectos</h2>
     {PROJECTS.map(({ image, title, description, tags, link, github }) => (
       <article key={title} className="project-card">
         <div className="project-image-container" data-aos="fade-up" data-aos-delay="200">

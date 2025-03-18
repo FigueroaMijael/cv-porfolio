@@ -36,6 +36,13 @@ const translations = {
       experience: "Professional experience",
       experiences: "No experience in the field",
       createPage: "page created by: 'Figueroa Mijael'",
+      project: "PROJECTS",
+      formulaweb: "Sports Information Website Number One in Motorsports. Where You Can Find Out The Latest News About Your Favorite Driver Or Team In The Championship. Created from scratch with only HTML and CSS.",
+      programming: "'Programming' Is An E-Commerse Designed Purely With Java Script. Which Lets You Simulate A Simple Purchase Process.",
+      backcommerse: "'Back-Commerse' Is A Full Flow E-Commerse. This allows you to register and log in users, saving each movement in the database (new user, role, last start, etc.). It has a user profile view with its custom configuration and a chat for users to interact in real time. Different Roles Allow Different Functions Depending on the User. It allows you to view products, see their details, add to cart, view the cart, complete the purchasing process through the Mercado Pago Check-In, and receive a receipt with the ID and details of the purchase.",
+      contacts: "CONTACT",
+      medioContact: "Contact me by:",
+
     },
     es: {
       home: "Inicio",
@@ -71,6 +78,12 @@ const translations = {
       experience: "Experiencia profecional",
       experiences: "Sin experiencia en el rubro",
       createPage: "Pagina creada por: 'Figueroa Mijael'",
+      project: "PROYECTOS",
+      formulaweb: "Web Informativa Del Deporte Numero Uno Del Automivilismo. Donde Podes Conocer Las Ultimas Novedades Sobre Tu Piloto U Equipo Favorito Del Campeonato. Creada Desde Cero Con Solo HTML Y CSS.",
+      programming: "'Programming' Es Un E-Commerse Diseñado Puramente Con Java Script. El Cual Te Deja Simular Un Proceso Simple De Compra.",
+      backcommerse: "'Back-Commerse' Es Un E-Commerse De Flujo Completo. Este Permite Registrar Y Loguear Usuarios Guardando Cada Movimiento En La Base De Dato (Nuevo Usuario, Rol, Ultimo Inicio, Etc). Posee Vista De Perfil Del Usuario Con Su Custom De Configuracion Y Un Chat Para Que Interactuen Los Usuarios En Tiempo Real. Los Diferentes Roles Permiten Distintas Funciones Segun El Usuario. Permite Visualizar Productos, Ver Su Detalle, Agregar Al Carrito, Visualizar El Carrito, Finalizar El Proceso De Compras Mediante El Check-In De Mercado Pago, Recibe Un Comprobante Con El Id Y Detalle De La Compra.",
+      contacts: "CONTACTO",
+      medioContact: "Contactame por:",
     },
   };  
 
