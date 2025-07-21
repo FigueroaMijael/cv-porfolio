@@ -194,3 +194,15 @@ body.dark .project-link {
   
 }
 
+.bg-ptrp {
+  background-color: #ffadd4;
+}
+
+.bg-c {
+  background-color: #00599C;
+}
+
+.project-tag:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
