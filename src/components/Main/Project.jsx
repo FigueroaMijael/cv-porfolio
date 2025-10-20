@@ -7,6 +7,7 @@ import proyectoDos from '../../img/project/ProgrammingProject.png'
 import proyectoTres from '../../img/project/E-ecommersBackend.png'
 import proyectoCuatro from '../../img/project/draguada.png'
 import proyectoCinco from '../../img/project/geminis.png'
+import proyectoSeis from '../../img/project/geminis.png'
 import { useTranslation } from '../../Context/Languaje-context';
 
 
@@ -115,6 +116,14 @@ const PROJECTS = [
     github: "https://github.com/FigueroaMijael/E-geminis.git",
     image: proyectoCinco,
     tags: [TAGS.VUE, TAGS.MONGODB],
+  },
+  {
+    title: "NauticaElAnzuelo | e-commers",
+    description: "",
+    link: "",
+    github: "https://github.com/FigueroaMijael/",
+    image: proyectoSeis,
+    tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.MONGODB],
   },
 ];
 

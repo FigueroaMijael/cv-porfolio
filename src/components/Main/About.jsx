@@ -2,7 +2,7 @@ import React from 'react'
 import '../../pages/About/AboutPage.css'
 import ButtomGet from '../ButtonGet/ButtomGet'
 import { Link } from 'react-router-dom'
-import micv from '../../cv/MiCV.pdf'
+import micv from '../../cv/Cv.pdf'
 import { useTranslation } from '../../Context/Languaje-context';
 
 const About = () => {
@@ -20,7 +20,7 @@ const { translate } = useTranslation(); // Usa el contexto
             <p>{translate('description')}</p>
             <ul>
               <li>
-                <p>{translate('age')} <span>20</span></p>
+                <p>{translate('age')} <span>21</span></p>
                 <p>Email: <span>figueroamijael86@gmail.com</span></p>
                 <p>{translate('from')} <span>Buenos Aires, Argentina</span></p>
               </li>

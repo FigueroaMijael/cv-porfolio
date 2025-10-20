@@ -3,13 +3,14 @@ import HeaderPage from '../../components/Header/HeaderPage';
 import ParticlesBackground from '../../components/ParticlesBackground/ParticlesBackground';
 import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';
 import Footer from '../../components/Footer/Footer';
-import cv from '../../cv/MiCV.pdf';
+import cv from '../../cv/Cv.pdf';
 import photo from '../../img/me/me-photo.pdf';
 import '../../pages/About/AboutPage.css';
-import DW from '../../img/certificated/649f245b4268360002c60e46.png'
-import JS from '../../img/certificated/64f09acf8278ce9cace9ede1.png'
-import RJS from '../../img/certificated/65548694b4768ce51454cd11.png'
-import PB from '../../img/certificated/663b8342bccd557071499eb8.png'
+import DW from '../../img/certificated/649f245b4268360002c60e46.png';
+import JS from '../../img/certificated/64f09acf8278ce9cace9ede1.png';
+import RJS from '../../img/certificated/65548694b4768ce51454cd11.png';
+import PB from '../../img/certificated/663b8342bccd557071499eb8.png';
+import CS from '../../img/certificated/66fc99343ff0c813c7212038.png';
 
 const AboutPage = () => {
   function readMore() {
@@ -27,7 +28,8 @@ const AboutPage = () => {
     DW,
     JS,
     RJS,
-    PB
+    PB,
+    CS
   ];
 
   const [visibleSkills, setVisibleSkills] = useState({});
@@ -111,7 +113,7 @@ const AboutPage = () => {
             </div>
             <div className="sobre-mi-info">
               <p>
-              Hola, mi nombre el Mijael Figueroa ,tengo 20 años y estudio Desarrollo Web en la Universidad Pública de Ezeiza (UPE). He completado un año y medio de formación en Coderhouse, donde me certifiqué en Desarrollo Web, JavaScript, React JS y Backend, dominando tanto el front-end como el back-end. Actualmente, estoy realizando un curso de Ciberseguridad en Coderhouse para mejorar mis habilidades en ese campo.
+              Hola, mi nombre el Mijael Figueroa ,tengo 21 años y estudio Desarrollo Web en la Universidad Pública de Ezeiza (UPE). He completado un año y medio de formación en Coderhouse, donde me certifiqué en Desarrollo Web, JavaScript, React JS y Backend, dominando tanto el front-end como el back-end. Tambien realice un curso de Ciberseguridad en Coderhouse para mejorar mis habilidades en ese campo.
               Aunque no tengo experiencia laboral en programación, confío en mis habilidades, inteligencia, capacidad de resolución de problemas y rápida absorción de conocimientos para aportar significativamente a cualquier empresa o proyecto. Me gusta estar en constante aprendizaje, conociendo nuevas herramientas y técnicas para ser más eficaz en el trabajo.
               Disfruto trabajando en equipo y colaborando con otros para alcanzar objetivos comunes. Mi objetivo es convertirme en un gran programador, dominando varios campos y contribuyendo ampliamente a un equipo de trabajo donde se logren grandes avances. Aspiro a crecer continuamente en el apasionante mundo de la programación y el desarrollo web.
               </p>
