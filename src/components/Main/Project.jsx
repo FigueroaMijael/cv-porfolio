@@ -2,12 +2,9 @@ import '../../pages/Project/ProjectPage.css';
 import JavaScript from '../Icons/JavaScript';
 import ReactJS from '../Icons/React';
 import MongoDB from '../Icons/Mongo';
-import proyectoUno from '../../img/project/FormulawebProject.png'
-import proyectoDos from '../../img/project/ProgrammingProject.png'
 import proyectoTres from '../../img/project/E-ecommersBackend.png'
 import proyectoCuatro from '../../img/project/draguada.png'
-import proyectoCinco from '../../img/project/geminis.png'
-import proyectoSeis from '../../img/project/geminis.png'
+import proyectoSeis from '../../img/project/Anzuelo.png'
 import { useTranslation } from '../../Context/Languaje-context';
 
 
@@ -59,13 +56,6 @@ const TAGS = {
       <svg className="project-tag-icon" viewBox="0 0 512 384" xmlns="http://www.w3.org/2000/svg" width="512" height="384"><path fill="#CF649A" d="M441 221c-18 0-34 4-47 10-5-9-9-17-10-24s-2-11-1-20 6-21 6-22c0 0-1-5-11-5-11 0-20 2-21 5l-4 15c-2 9-20 43-31 60-4-7-7-13-7-17-1-8-2-12-1-21s6-20 6-21-1-6-11-6c-11 0-20 2-21 5l-4 15-34 76-8 18c-2 4 0 0 0 1l-3 5-4 5s-1-7 1-16c3-19 12-49 12-51 0 0 2-5-6-8-7-3-9 2-10 2l-1 1s8-34-16-34c-14 0-35 17-45 31l-34 19-17 9-1-1c-29-31-82-52-79-93 0-15 6-54 101-102 79-39 141-28 152-4 16 34-33 97-115 106-31 3-47-9-51-13-4-5-5-5-7-4s-1 5 0 8c3 6 13 17 30 23 15 5 51 8 95-9 49-19 88-72 77-117-12-45-87-60-157-35-43 15-88 39-121 70-39 36-45 68-43 81 10 47 74 78 100 100l-3 2c-13 7-63 33-75 60-14 31 2 53 13 56 33 10 68-7 86-34 18-28 16-64 8-80l-1-1 11-6 18-10c-3 9-5 19-6 34-2 17 6 40 15 49 4 4 9 4 12 4 11 0 16-9 22-20l13-28s-8 41 13 41c7 0 15-9 18-14l1-1 1-2 20-37 25-57 5 20c2 8 7 16 10 24l-4 7-8 10c-10 12-23 26-24 30-2 5-2 8 2 11 3 2 8 2 13 2l18-4 17-9c10-7 16-18 15-32 0-7-3-15-6-22l3-4c16-23 28-49 28-49l5 21 9 20a89 89 0 0 0-27 36c-6 17-2 24 7 26 4 1 10-1 14-3 5-1 11-4 17-8 10-8 20-18 19-32 0-6-2-13-4-19 12-5 29-8 49-5 45 5 54 33 52 44-2 12-11 18-14 20l-4 4c1 2 2 2 5 2 3-1 23-10 24-31 1-28-25-58-71-57zM97 336c-14 16-35 23-44 17-9-5-6-29 13-46 11-10 25-20 34-26l9-5 1-1 3-1c6 24 0 45-16 62zm108-73c-5 13-16 45-22 43-6-1-9-26-2-50 4-12 13-26 18-32 8-9 17-12 19-8 3 5-10 39-13 47zm89 43-5 1v-2l16-17 9-11v1c0 14-14 24-20 28zm68-16c-2-1-1-5 4-16 2-5 7-13 15-20l2 9c0 18-13 24-21 27z"/></svg>
     )
   },
-    C: {
-    name: "C",
-    class: "bg-green text-white",
-    icon: () => (
-      <svg className="project-tag-icon" viewBox="0 0 306 345" xmlns="http://www.w3.org/2000/svg" width="306" height="345" fill="none"><g clip-path="url(#c__a)"><path fill="#00599C" d="M302.107 258.262c2.401-4.159 3.893-8.845 3.893-13.053V99.139c0-4.207-1.49-8.892-3.892-13.051L153 172.175l149.107 86.087Z"/><path fill="#004482" d="m166.25 341.193 126.5-73.034c3.644-2.104 6.956-5.737 9.357-9.897L153 172.175 3.893 258.263c2.4 4.159 5.714 7.793 9.357 9.896l126.5 73.034c7.287 4.208 19.213 4.208 26.5 0Z"/><path fill="#659AD2" d="M302.108 86.087c-2.402-4.16-5.715-7.793-9.358-9.897L166.25 3.156c-7.287-4.208-19.213-4.208-26.5 0L13.25 76.19C5.962 80.397 0 90.725 0 99.14v146.069c0 4.208 1.491 8.894 3.893 13.053L153 172.175l149.108-86.088Z"/><path fill="#fff" d="M153 274.175c-56.243 0-102-45.757-102-102s45.757-102 102-102c36.292 0 70.139 19.53 88.331 50.968l-44.143 25.544c-9.105-15.736-26.038-25.512-44.188-25.512-28.122 0-51 22.878-51 51 0 28.121 22.878 51 51 51 18.152 0 35.085-9.776 44.191-25.515l44.143 25.543c-18.192 31.441-52.04 50.972-88.334 50.972Z"/></g><defs><clipPath id="c__a"><path fill="#fff" d="M0 0h306v344.35H0z"/></clipPath></defs></svg>
-    )
-  },
     VUE: {
     name: "VUE",
     class: "bg-green text-white",
@@ -73,29 +63,49 @@ const TAGS = {
       <svg className="project-tag-icon" viewBox="0 0 256 221" width="256" height="221" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"><path d="M204.8 0H256L128 220.8 0 0h97.92L128 51.2 157.44 0h47.36Z" fill="#41B883"/><path d="m0 0 128 220.8L256 0h-51.2L128 132.48 50.56 0H0Z" fill="#41B883"/><path d="M50.56 0 128 133.12 204.8 0h-47.36L128 51.2 97.92 0H50.56Z" fill="#35495E"/></svg>
     )
   },
+    Tailwind: {
+    name: "Tailwind CSS",
+    class: "bg-blue text-white",
+    icon: () => (
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 262 33"><path fill="#38BDF8" fill-rule="evenodd" d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0ZM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2Z" clip-rule="evenodd"/><path fill="#fff" fill-rule="evenodd" d="M80.996 13.652h-4.712v9.12c0 2.432 1.596 2.394 4.712 2.242V28.7c-6.308.76-8.816-.988-8.816-5.928v-9.12h-3.496V9.7h3.496V4.596l4.104-1.216V9.7h4.712v3.952ZM98.958 9.7h4.104v19h-4.104v-2.736c-1.444 2.014-3.686 3.23-6.65 3.23-5.168 0-9.462-4.37-9.462-9.994 0-5.662 4.294-9.994 9.462-9.994 2.964 0 5.206 1.216 6.65 3.192V9.7Zm-6.004 15.58c3.42 0 6.004-2.546 6.004-6.08 0-3.534-2.584-6.08-6.004-6.08-3.42 0-6.004 2.546-6.004 6.08 0 3.534 2.584 6.08 6.004 6.08Zm16.948-18.43c-1.444 0-2.622-1.216-2.622-2.622a2.627 2.627 0 0 1 2.622-2.622 2.629 2.629 0 0 1 2.622 2.622c0 1.406-1.178 2.622-2.622 2.622ZM107.85 28.7v-19h4.104v19h-4.104Zm8.854 0V.96h4.104V28.7h-4.104Zm30.742-19h4.332l-5.966 19h-4.028l-3.952-12.806-3.99 12.806h-4.028l-5.966-19h4.332l3.686 13.11 3.99-13.11h3.914l3.952 13.11 3.724-13.11Zm9.424-2.85c-1.444 0-2.622-1.216-2.622-2.622a2.627 2.627 0 0 1 2.622-2.622 2.629 2.629 0 0 1 2.622 2.622c0 1.406-1.178 2.622-2.622 2.622Zm-2.052 21.85v-19h4.104v19h-4.104Zm18.848-19.494c4.256 0 7.296 2.888 7.296 7.828V28.7h-4.104V17.452c0-2.888-1.672-4.408-4.256-4.408-2.698 0-4.826 1.596-4.826 5.472V28.7h-4.104v-19h4.104v2.432c1.254-1.976 3.306-2.926 5.89-2.926ZM200.418 2.1h4.104v26.6h-4.104v-2.736c-1.444 2.014-3.686 3.23-6.65 3.23-5.168 0-9.462-4.37-9.462-9.994 0-5.662 4.294-9.994 9.462-9.994 2.964 0 5.206 1.216 6.65 3.192V2.1Zm-6.004 23.18c3.42 0 6.004-2.546 6.004-6.08 0-3.534-2.584-6.08-6.004-6.08-3.42 0-6.004 2.546-6.004 6.08 0 3.534 2.584 6.08 6.004 6.08Zm23.864 3.914c-5.738 0-10.032-4.37-10.032-9.994 0-5.662 4.294-9.994 10.032-9.994 3.724 0 6.954 1.938 8.474 4.902l-3.534 2.052c-.836-1.786-2.698-2.926-4.978-2.926-3.344 0-5.89 2.546-5.89 5.966 0 3.42 2.546 5.966 5.89 5.966 2.28 0 4.142-1.178 5.054-2.926l3.534 2.014c-1.596 3.002-4.826 4.94-8.55 4.94Zm15.314-14.25c0 3.458 10.222 1.368 10.222 8.398 0 3.8-3.306 5.852-7.41 5.852-3.8 0-6.536-1.71-7.752-4.446l3.534-2.052c.608 1.71 2.128 2.736 4.218 2.736 1.824 0 3.23-.608 3.23-2.128 0-3.382-10.222-1.482-10.222-8.284 0-3.572 3.078-5.814 6.954-5.814 3.116 0 5.7 1.444 7.03 3.952l-3.458 1.938c-.684-1.482-2.014-2.166-3.572-2.166-1.482 0-2.774.646-2.774 2.014Zm17.518 0c0 3.458 10.222 1.368 10.222 8.398 0 3.8-3.306 5.852-7.41 5.852-3.8 0-6.536-1.71-7.752-4.446l3.534-2.052c.608 1.71 2.128 2.736 4.218 2.736 1.824 0 3.23-.608 3.23-2.128 0-3.382-10.222-1.482-10.222-8.284 0-3.572 3.078-5.814 6.954-5.814 3.116 0 5.7 1.444 7.03 3.952l-3.458 1.938c-.684-1.482-2.014-2.166-3.572-2.166-1.482 0-2.774.646-2.774 2.014Z" clip-rule="evenodd"/></svg>
+    )
+  },
+  NODE: {
+    name: "NodeJs",
+    class: "bg-green text-white",
+    icon: () => (
+                          <svg className="icons-skils" viewBox="0 0 256 292" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="256" height="292">
+                        <defs>
+                            <linearGradient id="a" x1="68.188%" x2="27.823%" y1="17.487%" y2="89.755%">
+                                <stop offset="0%" stop-color="#41873F"/>
+                                <stop offset="32.88%" stop-color="#418B3D"/>
+                                <stop offset="63.52%" stop-color="#419637"/>
+                                <stop offset="93.19%" stop-color="#3FA92D"/>
+                                <stop offset="100%" stop-color="#3FAE2A"/>
+                            </linearGradient>
+                            <linearGradient id="c" x1="43.277%" x2="159.245%" y1="55.169%" y2="-18.306%">
+                                <stop offset="13.76%" stop-color="#41873F"/>
+                                <stop offset="40.32%" stop-color="#54A044"/>
+                                <stop offset="71.36%" stop-color="#66B848"/>
+                                <stop offset="90.81%" stop-color="#6CC04A"/>
+                            </linearGradient>
+                            <linearGradient id="f" x1="-4.389%" x2="101.499%" y1="49.997%" y2="49.997%">
+                                <stop offset="9.192%" stop-color="#6CC04A"/>
+                                <stop offset="28.64%" stop-color="#66B848"/>
+                                <stop offset="59.68%" stop-color="#54A044"/>
+                                <stop offset="86.24%" stop-color="#41873F"/>
+                            </linearGradient>
+                        <path id="b" d="M134.923 1.832c-4.344-2.443-9.502-2.443-13.846 0L6.787 67.801C2.443 70.244 0 74.859 0 79.745v132.208c0 4.887 2.715 9.502 6.787 11.945l114.29 65.968c4.344 2.444 9.502 2.444 13.846 0l114.29-65.968c4.344-2.443 6.787-7.058 6.787-11.945V79.745c0-4.886-2.715-9.501-6.787-11.944L134.923 1.832Z"/><path id="e" d="M134.923 1.832c-4.344-2.443-9.502-2.443-13.846 0L6.787 67.801C2.443 70.244 0 74.859 0 79.745v132.208c0 4.887 2.715 9.502 6.787 11.945l114.29 65.968c4.344 2.444 9.502 2.444 13.846 0l114.29-65.968c4.344-2.443 6.787-7.058 6.787-11.945V79.745c0-4.886-2.715-9.501-6.787-11.944L134.923 1.832Z"/></defs><path fill="url(#a)" d="M134.923 1.832c-4.344-2.443-9.502-2.443-13.846 0L6.787 67.801C2.443 70.244 0 74.859 0 79.745v132.208c0 4.887 2.715 9.502 6.787 11.945l114.29 65.968c4.344 2.444 9.502 2.444 13.846 0l114.29-65.968c4.344-2.443 6.787-7.058 6.787-11.945V79.745c0-4.886-2.715-9.501-6.787-11.944L134.923 1.832Z"/><mask id="d" fill="#fff"><use xlink:href="#b"/></mask><path fill="url(#c)" d="M249.485 67.8 134.65 1.833c-1.086-.542-2.443-1.085-3.529-1.357L2.443 220.912c1.086 1.357 2.444 2.443 3.8 3.258l114.834 65.968c3.258 1.9 7.059 2.443 10.588 1.357L252.47 70.515c-.815-1.086-1.9-1.9-2.986-2.714Z" mask="url(#d)"/><mask id="g" fill="#fff"><use xlink:href="#e"/></mask><path fill="url(#f)" d="M249.756 223.898c3.258-1.9 5.701-5.158 6.787-8.687L130.579.204c-3.258-.543-6.787-.272-9.773 1.628L6.786 67.53l122.979 224.238c1.628-.272 3.529-.815 5.158-1.63l114.833-66.239Z" mask="url(#g)"/>
+                    </svg>
+    )
+  }
 };
 
 const PROJECTS = [
-  
-  {
-    title: "Formula One Web",
-    description: "{translate('formulawed')}",
-    link: "https://figueroamijael.github.io/FormulaWeb/",
-    github: "https://github.com/FigueroaMijael/FormulaWeb.git",
-    image: proyectoUno,
-    tags: [TAGS.HTML5, TAGS.CSS],
-  },
-  {
-    title: "Programming",
-    description: "'Programming' es un E-commerse diseñado puramente con Java Script. El cual te deja simular un proceso simple de compra.",
-    link: "https://figueroamijael.github.io/proyecto-js-2/",
-    github: "https://github.com/FigueroaMijael/proyecto-js-2.git",
-    image: proyectoDos,
-    tags: [TAGS.JAVASCRIPT],
-  },
+
   {
     title: "Back-Commerse",
-    description: "'Back-Commerse' es un E-commerse de flujo completo. Este permite registrar y loguear usuarios guardando cada movimiento en la base de dato (nuevo usuario, rol, ultimo inicio, etc). Posee vista de perfil del usuario con su custom de configuracion y un chat para que interactuen los usuarios en tiempo real. Los diferentes roles permiten distintas funciones segun el usuario. Permite visualizar productos, ver su detalle, agregar al carrito, visualizar el carrito, finalizar el proceso de compras mediante el check-in de Mercado pago, recibe un comprobante con el id y detalle de la compra.",
+    description: "'Back-Commerse' es un E-commerse de flujo completo. Este permite registrar y loguear usuarios guardando cada movimiento en la base de dato (nuevo usuario, rol, ultimo inicio, etc). Posee vista de perfil del usuario con su custom de configuracion y un chat para que interactuen los usuarios en tiempo real. Los diferentes roles permiten distintas funciones segun el usuario. Permite visualizar productos, ver su detalle, agregar al carrito, visualizar el carrito, finalizar el proceso de compras mediante el check-in de Mercado pago, recibe un comprobante con el id y detalle de la compra. ES UN ECOMMERCE FEO PERO ME RECUERDA MIS INICIOS POR ESO LO DEJO!!",
     link: "https://myproyectfinals-production.up.railway.app",
     github: "https://github.com/FigueroaMijael/MyProyectFinals.git",
     image: proyectoTres,
@@ -109,21 +119,13 @@ const PROJECTS = [
     image: proyectoCuatro,
     tags: [TAGS.HTML5, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.SCSS],
   },
-    {
-    title: "Geminis | e-commers",
-    description: "",
-    link: "",
-    github: "https://github.com/FigueroaMijael/E-geminis.git",
-    image: proyectoCinco,
-    tags: [TAGS.VUE, TAGS.MONGODB],
-  },
   {
     title: "NauticaElAnzuelo | e-commers",
-    description: "",
+    description: "Diseñé y desarrollé desde cero Náutica del Anzuelo, plataforma e-commerce de productos de náutica y pesca. Implementé arquitectura Full Stack JavaScript con Node.js + Express, MongoDB y React.js. Integré MercadoPago, sincronización con MercadoLibre mediante webhooks, y manejo de Axios, Multer, Nodemailer y Commander. El frontend usa Tailwind CSS, PostCSS y Bootwatch, priorizando diseño moderno, modular y responsive. Frontend: React.js,Tailwind CSS y diseño responsive. Backend: Node.js,Express,Webhooks,Axios y CORS. Base de datos:MongoDB,Mongoose Ot. habilidades:Integración de APIs,Git y Github",
     link: "",
     github: "https://github.com/FigueroaMijael/",
     image: proyectoSeis,
-    tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.MONGODB],
+    tags: [TAGS.REACT, TAGS.NODE, TAGS.Tailwind, TAGS.MONGODB],
   },
 ];
 
