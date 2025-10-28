@@ -26,14 +26,14 @@ const Content = () => {
           <p data-aos="fade-up" data-aos-delay="1000">{translate('occupation')}</p>
 
           <div className="redes-sociales">
-            <a href="https://www.linkedin.com/in/mijael-figueroa-019952249/" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1200"><i className="bi bi-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/mijael-figueroa-019952249?trk=contact-info" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1200"><i className="bi bi-linkedin"></i></a>
             <a href="https://github.com/FigueroaMijael" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1400"><i className="bi bi-github"></i></a>
             <a href="https://www.instagram.com/figuee15_/" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1600"><i className="bi bi-instagram"></i></a>
-            <a href="https://api.whatsapp.com/send?phone=541141974731" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1800"><i className="bi bi-whatsapp"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=541136817159" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1800"><i className="bi bi-whatsapp"></i></a>
           </div>
 
           <div className="wrapper">
-            <a className="button" href="https://www.linkedin.com/in/mijael-figueroa-019952249/" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1200">
+            <a className="button" href="https://www.linkedin.com/in/mijael-figueroa-019952249?trk=contact-info" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1200">
               <div className="icon">
                 <i className="bi bi-linkedin"></i>
               </div>
@@ -51,7 +51,7 @@ const Content = () => {
               </div>
               <span>Instagram</span>
             </a>
-            <a className="button" href="https://api.whatsapp.com/send?phone=541141974731" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1800">
+            <a className="button" href="https://api.whatsapp.com/send?phone=541136817159" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="1800">
               <div className="icon">
                 <i className="bi bi-whatsapp"></i>
               </div>

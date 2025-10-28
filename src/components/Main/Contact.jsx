@@ -40,7 +40,7 @@ const Contact = () => {
                     Gmail
                 </div>
             </a>
-            <a href="https://api.whatsapp.com/send?phone=541141974731" target="_blank" rel="noopener noreferrer" data-aos="zoom-in">
+            <a href="https://api.whatsapp.com/send?phone=541136817159" target="_blank" rel="noopener noreferrer" data-aos="zoom-in">
                 <div className="layer">
                     <span></span>
                     <span></span>
@@ -64,7 +64,7 @@ const Contact = () => {
                     Instagram
                 </div>
             </a>
-            <a href="" target="_blank" rel="noopener noreferrer" data-aos="zoom-in">
+            <a href="https://t.me/1136817159" target="_blank" rel="noopener noreferrer" data-aos="zoom-in">
                 <div className="layer">
                     <span></span>
                     <span></span>
@@ -88,7 +88,7 @@ const Contact = () => {
                     Linkedin
                 </div>
             </a>
-            <a href="https://www.linkedin.com/in/mijael-figueroa-019952249/" target="_blank" rel="noopener noreferrer" data-aos="zoom-in">
+            <a href="https://www.linkedin.com/in/mijael-figueroa-019952249?trk=contact-info" target="_blank" rel="noopener noreferrer" data-aos="zoom-in">
                 <div className="layer">
                     <span></span>
                     <span></span>
