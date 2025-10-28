@@ -1,7 +1,7 @@
 .contenido {
     background: #010101;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
     background-position: center center;
 	background-size: cover;
 }
@@ -71,10 +71,11 @@
     transition: background-color .3s ease, color .3s ease;
 }
 
-.wrapper .button .icon i{
-    font-size: 2.4rem;
-    line-height: 1;
-    transition: color .3s ease;
+.wrapper .button .icon img{
+    width: 2.6rem;
+    height: 2.6rem;
+    object-fit: contain;
+    transition: filter .3s ease;
 }
 
 .wrapper .button span{
@@ -90,9 +91,8 @@
     opacity: 1;
 }
 
-.wrapper .button:hover .icon,
-.wrapper .button:hover .icon i{
-    color: #fff;
+.wrapper .button:hover .icon img{
+    filter: brightness(0) invert(1);
 }
 
 .wrapper .button:nth-child(1):hover{
@@ -119,17 +119,28 @@
     width: 5.2rem;
     height: 5.2rem;
     border-radius: 50%;
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: var(--green);
-    color: var(--black);
-    transition: transform .35s ease, box-shadow .35s ease, color .3s ease;
+    transition: transform .35s ease, box-shadow .35s ease, background .3s ease, filter .3s ease;
     box-shadow: 0px 10px 18px rgba(0,0,0,0.3);
+}
+
+.titulo .redes-sociales a img{
+    width: 2.6rem;
+    height: 2.6rem;
+    object-fit: contain;
+    transition: filter .3s ease;
 }
 
 .titulo .redes-sociales a:hover{
     transform: translateY(-6px);
-    color: #fff;
+    background: var(--black);
+}
+
+.titulo .redes-sociales a:hover img{
+    filter: brightness(0) invert(1);
 }
 
 .scroll-down {
@@ -225,12 +236,20 @@
         min-height: 600px;
     }
 
+    .inicio {
+        padding: 0 2.4rem;
+    }
+
     .inicio .titulo p {
         font-size: 3.5rem;
     }
     
     .inicio .titulo h1{
         font-size: 4rem;
+    }
+
+    .inicio .titulo{
+        margin: 16rem auto 0;
     }
 }
 
@@ -245,9 +264,19 @@
     }
 
     .titulo .redes-sociales a{
-        width: 4.6rem;
-        height: 4.6rem;
+        width: 4.4rem;
+        height: 4.4rem;
         box-shadow: 0px 12px 18px rgba(0,0,0,0.35);
+    }
+
+    .titulo .redes-sociales a img{
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    .inicio .titulo{
+        margin-top: 13rem;
+        padding: 0 1.2rem;
     }
 }
 
@@ -265,6 +294,11 @@
     }
     .scroll-down {
         display: none;
+    }
+
+    .inicio .titulo{
+        margin-top: 11rem;
+        padding: 0 0.8rem;
     }
 
     .icons a{

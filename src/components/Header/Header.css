@@ -85,8 +85,11 @@ body.light #darkMode {
   position: relative;
   cursor: pointer;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   outline: none;
   width: 60px;
+  height: 30px;
   margin-top: 0.1rem;
   margin-bottom: 0.5rem;
 }
@@ -114,8 +117,11 @@ body.dark #darkMode {
   position: relative;
   cursor: pointer;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   outline: none;
   width: 60px;
+  height: 30px;
   margin-top: 0.1rem;
   margin-bottom: 0.5rem;
 }
@@ -136,14 +142,15 @@ body.dark #darkMode::after {
 }
 
 #darkMode span {
-  width: 3rem;
-  height: 3rem;
-  line-height: 3rem;
-  display: block;
+  flex: 1 1 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: none;
   color: #fff;
-  padding: 0 0 0 9px;
-  font-size: 1.5rem;
+  padding: 0;
+  font-size: 1.6rem;
 }
 
 #acceder-btn .btn {
@@ -273,11 +280,7 @@ body.dark #darkMode::after {
 
   body.light #darkMode span,
   body.dark #darkMode span {
-    width: 3rem;
-    height: 3rem;
-    line-height: 1rem;
-    padding: 4px 0 0 4px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .site-header {
@@ -314,8 +317,7 @@ body.dark #darkMode::after {
 
   body.light #darkMode span,
   body.dark #darkMode span {
-    line-height: 2.7rem;
-    padding: 2px 0 0 4px;
+    font-size: 1.4rem;
   }
 
   .navbar .active-link::before,

@@ -11,13 +11,14 @@ import ServicesPage from './pages/Service/ServicesPage'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 
 function App() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-      setLoading(true)
-      setTimeout(() => {
+      const timeoutId = setTimeout(() => {
           setLoading(false)
       }, 4000)
+
+      return () => clearTimeout(timeoutId)
   }, [])
   return (
       <>
