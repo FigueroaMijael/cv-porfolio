@@ -1,24 +1,28 @@
-import LinkInline from './LinkInLine';
-import './Experience.css'
+import './Experience.css';
+import { useTranslation } from '../../Context/Languaje-context';
 
-const ExperienceItem = ({ title, company, description, link, date }) => (
-  <div className="experience-item">
-    <div className="experience-content">
-      <div className="experience-header">
-        <span className="experience-point">&bull;</span>
+const ExperienceItem = ({ title, company, description, link, date }) => {
+  const { translate } = useTranslation();
+
+  return (
+    <article className="experience-item">
+      <header className="experience-header">
         <h3 className="experience-title">{title}</h3>
-        <h4 className="experience-company">{company}</h4>
-        <time className="experience-date">{date}</time>
-      </div>
-    </div>
-    <div className="experience-description">
-      <p>{description}</p>
-      {link && (
-        <LinkInline href={link}>
-        </LinkInline>
+        {company && <h4 className="experience-company">{company}</h4>}
+        {date && <time className="experience-date">{date}</time>}
+      </header>
+      {(description || link) && (
+        <div className="experience-description">
+          {description && <p>{description}</p>}
+          {link && (
+            <a className="link-inline" href={link} target="_blank" rel="noopener noreferrer">
+              {translate('readmore')}
+            </a>
+          )}
+        </div>
       )}
-    </div>
-  </div>
-);
+    </article>
+  );
+};
 
 export default ExperienceItem;
