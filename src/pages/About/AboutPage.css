@@ -496,6 +496,11 @@ body.dark .buttonDownload:hover {
 }
 
 @media (max-width: 450px) {
+    .sobre-mi{
+        padding-top: 10rem;
+
+    }    
+    
     .skill-container{
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 4rem;

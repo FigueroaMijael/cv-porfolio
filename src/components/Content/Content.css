@@ -288,9 +288,15 @@
     .inicio .titulo p {
         font-size: 3rem;
     }
+
+    .inicio {
+        margin-top: 12rem;
+        justify-content: center;
+        align-items: center;
+    }
     
     .inicio .titulo h1{
-        font-size: 3.5rem;
+        font-size: 4rem;
     }
     .scroll-down {
         display: none;
