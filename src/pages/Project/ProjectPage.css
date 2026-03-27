@@ -106,6 +106,18 @@
   background-color: #017a4a; 
 }
 
+.bg-dark {
+  background-color: #1f2937;
+}
+
+.bg-slate {
+  background-color: #334155;
+}
+
+.bg-cyan {
+  background-color: #0284c7;
+}
+
 .project-description {
   font-size: 1.6rem;
   line-height: 1.8;
@@ -187,6 +199,18 @@ body.dark .bg-orange {
 
 body.dark .bg-green {
   background-color: #017a4a; 
+}
+
+body.dark .bg-dark {
+  background-color: #1f2937;
+}
+
+body.dark .bg-slate {
+  background-color: #334155;
+}
+
+body.dark .bg-cyan {
+  background-color: #0284c7;
 }
 
 body.dark .project-description {

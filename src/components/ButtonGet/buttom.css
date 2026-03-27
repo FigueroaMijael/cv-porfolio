@@ -20,7 +20,16 @@
     cursor: pointer;
     font-weight: 700;
     white-space: pre;
+    text-decoration: none !important;
     transition: all 0.3s ease;
+}
+
+.cssbuttons-io-button,
+.cssbuttons-io-button:hover,
+.cssbuttons-io-button:focus,
+.cssbuttons-io-button:active {
+    text-decoration: none !important;
+    border-bottom: none !important;
 }
 
 .cssbuttons-io-button .icon {

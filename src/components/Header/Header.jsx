@@ -3,20 +3,21 @@ import DarkMode from '../darkMode/darkMode';
 import { Image } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 import { useTranslation } from '../../Context/Languaje-context';
-import "./Header.css";
+import './Header.css';
 import logo from '../../img/logo/54345976_transparent_edit.png';
-import logoDark from "../../img/logo/9003b4f9-9098-4311-8259-c27f188b937a.png";
+import logoDark from '../../img/logo/9003b4f9-9098-4311-8259-c27f188b937a.png';
 
 const Header = () => {
-    const [logoSrc, setLogoSrc] = useState(logo);
+    const [logoSrc, setLogoSrc] = useState(() => {
+        const theme = localStorage.getItem('theme');
+        return theme === 'light' ? logo : logoDark;
+    });
 
-    const { translate, switchLanguage } = useTranslation(); // Usa el contexto
+    const { translate, switchLanguage } = useTranslation();
 
     useEffect(() => {
-        const theme = localStorage.getItem("theme");
-        if (theme === "dark") {
-            setLogoSrc(logoDark);
-        }
+        const theme = localStorage.getItem('theme');
+        setLogoSrc(theme === 'light' ? logo : logoDark);
     }, []);
 
     const handleThemeChange = (theme) => {
@@ -29,15 +30,15 @@ const Header = () => {
 
     const menuDesplegable = () => {
         let navbar = document.querySelector('.navbar');
-        navbar.classList.toggle("activar");
+        navbar.classList.toggle('activar');
 
         window.onscroll = () => {
             if (window.scrollY > 0) {
-                document.querySelector(".site-header").classList.add("activar");
+                document.querySelector('.site-header').classList.add('activar');
             } else {
-                document.querySelector(".site-header").classList.remove("activar");
+                document.querySelector('.site-header').classList.remove('activar');
             }
-            navbar.classList.remove("activar");
+            navbar.classList.remove('activar');
         };
     };
 
@@ -67,12 +68,12 @@ const Header = () => {
                     <img
                         onClick={() => switchLanguage('en')}
                         src="https://nahuel61920.github.io/Portafoliovirtual/img/en.png"
-                        alt="EEUU"
+                        alt="English"
                     />
                     <img
                         onClick={() => switchLanguage('es')}
                         src="https://nahuel61920.github.io/Portafoliovirtual/img/es.png"
-                        alt="España"
+                        alt="Spanish"
                     />
                 </div>
             </nav>

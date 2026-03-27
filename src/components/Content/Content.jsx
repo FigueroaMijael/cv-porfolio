@@ -21,12 +21,12 @@ const Content = () => {
   const socialLinks = [
     {
       href: 'https://www.linkedin.com/in/mijael-figueroa-019952249?trk=contact-info',
-      label: 'Linkedin',
+      label: 'LinkedIn',
       icon: linkedinIcon,
     },
     {
       href: 'https://github.com/FigueroaMijael',
-      label: 'Github',
+      label: 'GitHub',
       icon: githubIcon,
     },
     {
@@ -35,8 +35,8 @@ const Content = () => {
       icon: instagramIcon,
     },
     {
-      href: 'https://api.whatsapp.com/send?phone=541136817159',
-      label: 'Whatsapp',
+      href: 'https://api.whatsapp.com/send?phone=1136817159',
+      label: 'WhatsApp',
       icon: whatsappIcon,
     },
   ];

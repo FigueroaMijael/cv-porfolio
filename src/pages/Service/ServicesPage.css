@@ -1,8 +1,10 @@
 .servicios .row{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
     text-align: center;
+    max-width: 110rem;
+    margin: 0 auto;
 }
 
 .servicios .row .columns{
@@ -205,6 +207,10 @@
   
   /********************** Media Q **********************/
 @media (max-width: 760px) {
+    .servicios .row {
+      grid-template-columns: 1fr;
+    }
+
     .site-services .row {
       grid-template-columns: 90%;
     }

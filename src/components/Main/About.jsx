@@ -1,18 +1,17 @@
-import React from 'react'
-import '../../pages/About/AboutPage.css'
-import ButtomGet from '../ButtonGet/ButtomGet'
-import { Link } from 'react-router-dom'
-import micv from '../../cv/Cv.pdf'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from '../../Context/Languaje-context';
+import ButtomGet from '../ButtonGet/ButtomGet';
+import micv from '../../cv/Cv.pdf';
+import '../../pages/About/AboutPage.css';
 
 const About = () => {
-
-const { translate } = useTranslation(); // Usa el contexto
+  const { translate } = useTranslation();
 
   return (
     <>
-            <section className="sobre-mi" id="about-me">
-            <h2 className='heading'>{translate('aboutme')}</h2>
+      <section className="sobre-mi" id="about-me">
+        <h2 className="heading">{translate('aboutme')}</h2>
         <div className="row container">
           <div className="columns" data-aos="fade-right" data-aos-delay="300">
             <h3>{translate('who')}</h3>
@@ -26,7 +25,13 @@ const { translate } = useTranslation(); // Usa el contexto
               </li>
             </ul>
             <div className="mas-info">
-              <a href={micv} download="MiCV.pdf" target="_blank" rel="noopener noreferrer" className="btn-codigo buttonDownload">
+              <a
+                href={micv}
+                download={translate('downloadFileName')}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-codigo buttonDownload"
+              >
                 <div className="buttonDownload-content">
                   <div className="buttonDownload-icon"></div>
                   <span>{translate('downloadcv')}</span>
@@ -39,8 +44,8 @@ const { translate } = useTranslation(); // Usa el contexto
               </div>
             </div>
           </div>
-            <div className="columns col-skill" data-aos="fade-left" data-aos-delay="650">
-                <h3>skills</h3>
+          <div className="columns col-skill" data-aos="fade-left" data-aos-delay="650">
+                <h3>{translate('skillsTitle')}</h3>
                 <h4>Front-End</h4>
                 <div className="skill">
                     <div>
@@ -203,11 +208,11 @@ const { translate } = useTranslation(); // Usa el contexto
                         <h5>GitHub</h5>
                     </div>
                 </div>
-            </div>
+          </div>
         </div>
-    </section>
+      </section>
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;
