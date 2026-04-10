@@ -35,14 +35,22 @@ const Header = () => {
             }
         };
 
+        const handleKeyDown = (event) => {
+            if (event.key === 'Escape') {
+                setMenuOpen(false);
+            }
+        };
+
         handleScroll();
         handleResize();
         window.addEventListener('scroll', handleScroll);
         window.addEventListener('resize', handleResize);
+        window.addEventListener('keydown', handleKeyDown);
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
             window.removeEventListener('resize', handleResize);
+            window.removeEventListener('keydown', handleKeyDown);
         };
     }, []);
 
@@ -62,43 +70,50 @@ const Header = () => {
         setMenuOpen(false);
     };
 
+    const navItems = [
+        { to: 'inicio', label: translate('home') },
+        { to: 'about-me', label: translate('aboutMe') },
+        { to: 'build', label: translate('services') },
+        { to: 'stack', label: translate('stack') },
+        { to: 'project', label: translate('projects') },
+        { to: 'contact', label: translate('contact') },
+    ];
+
     return (
         <header className={`site-header ${isScrolled ? 'activar' : ''} ${menuOpen ? 'menu-open' : ''}`}>
-            <div className="header-start">
-                <button
-                    id="menu-btn"
-                    type="button"
-                    onClick={() => setMenuOpen((current) => !current)}
-                    aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
-                    aria-expanded={menuOpen}
-                >
-                    <i className={`bi ${menuOpen ? 'bi-x-lg' : 'bi-list'}`}></i>
-                </button>
+            <button
+                id="menu-btn"
+                type="button"
+                onClick={() => setMenuOpen((current) => !current)}
+                aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
+                aria-expanded={menuOpen}
+                aria-controls="site-navigation"
+            >
+                <i className={`bi ${menuOpen ? 'bi-x-lg' : 'bi-list'}`}></i>
+            </button>
 
+            <div className="header-brand">
                 <Link className="logo" to="inicio" spy={true} smooth={true} duration={500} onClick={closeMenu}>
                     <Image src={logoSrc} alt="FIGUEDEV logo" className="header-image" fluid />
                 </Link>
             </div>
 
-            <nav className={`navbar ${menuOpen ? 'activar' : ''}`}>
-                <Link to="inicio" spy={true} smooth={true} offset={-120} duration={500} onClick={closeMenu}>
-                    <p>{translate('home')}</p>
-                </Link>
-                <Link to="about-me" spy={true} smooth={true} offset={-120} duration={500} onClick={closeMenu}>
-                    <p>{translate('aboutMe')}</p>
-                </Link>
-                <Link to="build" spy={true} smooth={true} offset={-120} duration={500} onClick={closeMenu}>
-                    <p>{translate('services')}</p>
-                </Link>
-                <Link to="stack" spy={true} smooth={true} offset={-120} duration={500} onClick={closeMenu}>
-                    <p>{translate('stack')}</p>
-                </Link>
-                <Link to="project" spy={true} smooth={true} offset={-120} duration={500} onClick={closeMenu}>
-                    <p>{translate('projects')}</p>
-                </Link>
-                <Link to="contact" spy={true} smooth={true} offset={-120} duration={500} onClick={closeMenu}>
-                    <p>{translate('contact')}</p>
-                </Link>
+            <nav id="site-navigation" className={`navbar ${menuOpen ? 'activar' : ''}`}>
+                {navItems.map((item) => (
+                    <Link
+                        key={item.to}
+                        className="nav-link"
+                        activeClass="active-link"
+                        to={item.to}
+                        spy={true}
+                        smooth={true}
+                        offset={-120}
+                        duration={500}
+                        onClick={closeMenu}
+                    >
+                        {item.label}
+                    </Link>
+                ))}
             </nav>
 
             <div className="header-controls">

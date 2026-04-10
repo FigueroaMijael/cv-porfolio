@@ -32,14 +32,22 @@ const HeaderPage = () => {
             }
         };
 
+        const handleKeyDown = (event) => {
+            if (event.key === 'Escape') {
+                setMenuOpen(false);
+            }
+        };
+
         handleScroll();
         handleResize();
         window.addEventListener('scroll', handleScroll);
         window.addEventListener('resize', handleResize);
+        window.addEventListener('keydown', handleKeyDown);
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
             window.removeEventListener('resize', handleResize);
+            window.removeEventListener('keydown', handleKeyDown);
         };
     }, []);
 
@@ -59,43 +67,40 @@ const HeaderPage = () => {
         setMenuOpen(false);
     };
 
+    const navItems = [
+        { to: '/#inicio', label: 'Inicio' },
+        { to: '/#about-me', label: 'Sobre mí' },
+        { to: '/#build', label: 'Lo que construyo' },
+        { to: '/#stack', label: 'Tecnologías' },
+        { to: '/#project', label: 'Proyectos' },
+        { to: '/#contact', label: 'Contacto' },
+    ];
+
     return (
         <header className={`site-header ${isScrolled ? 'activar' : ''} ${menuOpen ? 'menu-open' : ''}`}>
-            <div className="header-start">
-                <button
-                    id="menu-btn"
-                    type="button"
-                    onClick={() => setMenuOpen((current) => !current)}
-                    aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
-                    aria-expanded={menuOpen}
-                >
-                    <i className={`bi ${menuOpen ? 'bi-x-lg' : 'bi-list'}`}></i>
-                </button>
+            <button
+                id="menu-btn"
+                type="button"
+                onClick={() => setMenuOpen((current) => !current)}
+                aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
+                aria-expanded={menuOpen}
+                aria-controls="site-navigation-page"
+            >
+                <i className={`bi ${menuOpen ? 'bi-x-lg' : 'bi-list'}`}></i>
+            </button>
 
+            <div className="header-brand">
                 <Link className="logo" to="/#inicio" onClick={closeMenu}>
                     <Image src={logoSrc} alt="FIGUEDEV logo" className="header-image" fluid />
                 </Link>
             </div>
 
-            <nav className={`navbar ${menuOpen ? 'activar' : ''}`}>
-                <Link to="/#inicio" onClick={closeMenu}>
-                    <p>Inicio</p>
-                </Link>
-                <Link to="/#about-me" onClick={closeMenu}>
-                    <p>Sobre mí</p>
-                </Link>
-                <Link to="/#build" onClick={closeMenu}>
-                    <p>Lo que construyo</p>
-                </Link>
-                <Link to="/#stack" onClick={closeMenu}>
-                    <p>Tecnologías</p>
-                </Link>
-                <Link to="/#project" onClick={closeMenu}>
-                    <p>Proyectos</p>
-                </Link>
-                <Link to="/#contact" onClick={closeMenu}>
-                    <p>Contacto</p>
-                </Link>
+            <nav id="site-navigation-page" className={`navbar ${menuOpen ? 'activar' : ''}`}>
+                {navItems.map((item) => (
+                    <Link key={item.to} className="nav-link" to={item.to} onClick={closeMenu}>
+                        {item.label}
+                    </Link>
+                ))}
             </nav>
 
             <div className="header-controls">

@@ -5,10 +5,10 @@
   right: 0;
   z-index: 1000;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
-  gap: 2.2rem;
-  padding: 2rem 6%;
+  gap: 2.4rem;
+  padding: 1.8rem 6%;
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(14px);
 }
@@ -22,19 +22,10 @@ body.dark .site-header {
   background: rgba(8, 11, 8, 0.92);
 }
 
-.header-start,
-.header-controls {
-  display: flex;
-  align-items: center;
-}
-
-.header-start {
-  gap: 1.4rem;
+.header-brand {
+  grid-column: 1;
+  justify-self: start;
   min-width: 0;
-}
-
-.header-controls {
-  gap: 1.4rem;
 }
 
 .logo {
@@ -48,28 +39,30 @@ body.dark .site-header {
 }
 
 .navbar {
-  position: relative;
+  grid-column: 2;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2.2rem;
+  gap: clamp(1.4rem, 1.7vw, 2.4rem);
 }
 
-.navbar a {
+.nav-link {
   text-decoration: none;
   font-size: 1.7rem;
   font-weight: 700;
-  margin: 0;
+  line-height: 1.2;
   color: var(--black);
   position: relative;
   padding-bottom: 0.4rem;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
-body.dark .navbar a {
+body.dark .nav-link {
   color: #f2fff2;
 }
 
-.navbar a::before {
+.nav-link::before {
   content: '';
   height: 3px;
   width: 0;
@@ -77,13 +70,21 @@ body.dark .navbar a {
   position: absolute;
   left: 0;
   bottom: -0.6rem;
-  transition: 0.3s ease-out;
+  transition: width 0.25s ease-out;
 }
 
-.navbar a:hover::before,
+.nav-link:hover::before,
 .navbar .active-link::before,
-.navbar a.active::before {
+.nav-link.active::before {
   width: 100%;
+}
+
+.header-controls {
+  grid-column: 3;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
 }
 
 #buttons {
@@ -171,121 +172,64 @@ body.dark #darkMode::after {
 }
 
 #menu-btn {
+  display: none;
   width: 4.4rem;
   height: 4.4rem;
   border-radius: 1.2rem;
-  display: none;
   align-items: center;
   justify-content: center;
   font-size: 2rem;
   color: var(--light-color);
   background: rgba(0, 254, 47, 0.08);
   cursor: pointer;
-  z-index: 1100;
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1220px) {
   .site-header {
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: 1.4rem;
-    padding: 1.8rem 4.5%;
+    padding: 1.7rem 4.5%;
+    gap: 1.8rem;
   }
 
   .site-header .header-image {
-    width: 18.5rem;
+    width: 18rem;
   }
 
-  .navbar {
-    gap: 1.5rem;
-  }
-
-  .navbar a {
+  .nav-link {
     font-size: 1.55rem;
+  }
+
+  #buttons img {
+    height: 2.2rem;
   }
 }
 
 @media (max-width: 900px) {
   .site-header {
-    grid-template-columns: auto 1fr auto;
-    padding: 1.4rem 4%;
-  }
-
-  .site-header .header-image {
-    width: 16.8rem;
-  }
-
-  .navbar {
-    position: absolute;
-    top: calc(100% + 1rem);
-    left: 4%;
-    right: 4%;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-    gap: 0.9rem;
-    padding: 1.4rem;
-    border-radius: 2rem;
-    background: rgba(255, 255, 255, 0.97);
-    border: 1px solid rgba(22, 65, 18, 0.08);
-    box-shadow: 0 24px 34px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transform: translateY(-1.2rem);
-  }
-
-  body.dark .navbar {
-    background: rgba(6, 10, 6, 0.98);
-    border-color: rgba(139, 255, 164, 0.08);
-  }
-
-  .navbar.activar {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: translateY(0);
-  }
-
-  .navbar a {
-    width: 100%;
-    padding: 1.2rem 1.4rem;
-    border-radius: 1.2rem;
-    background: rgba(0, 254, 47, 0.06);
-    font-size: 1.7rem;
-    text-align: left;
-  }
-
-  body.dark .navbar a {
-    background: rgba(255, 255, 255, 0.03);
-  }
-
-  .navbar a::before,
-  .navbar a.active::before,
-  .navbar .active-link::before {
-    content: none;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas:
+      'menu brand controls'
+      'nav nav nav';
+    gap: 1rem;
+    padding: 1.3rem 1.8rem;
   }
 
   #menu-btn {
     display: inline-flex;
-  }
-}
-
-@media (max-width: 640px) {
-  .site-header {
-    padding: 1.2rem 1.6rem;
-    gap: 1rem;
+    grid-area: menu;
+    justify-self: start;
   }
 
-  .header-start {
-    gap: 1rem;
+  .header-brand {
+    grid-area: brand;
+    justify-self: center;
   }
 
   .site-header .header-image {
-    width: 13.8rem;
+    width: 14rem;
   }
 
   .header-controls {
+    grid-area: controls;
     gap: 0.8rem;
   }
 
@@ -310,20 +254,56 @@ body.dark #darkMode::after {
   }
 
   .navbar {
-    left: 1.6rem;
-    right: 1.6rem;
-    top: calc(100% + 0.8rem);
+    grid-area: nav;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0.8rem;
+    padding: 1.4rem;
+    margin-top: 0.2rem;
+    border-radius: 2rem;
+    background: rgba(255, 255, 255, 0.97);
+    border: 1px solid rgba(22, 65, 18, 0.08);
+    box-shadow: 0 24px 34px rgba(0, 0, 0, 0.2);
+  }
+
+  body.dark .navbar {
+    background: rgba(6, 10, 6, 0.98);
+    border-color: rgba(139, 255, 164, 0.08);
+  }
+
+  .navbar.activar {
+    display: flex;
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    border-radius: 1.2rem;
+    background: rgba(0, 254, 47, 0.06);
+    font-size: 1.65rem;
+    text-align: left;
+  }
+
+  body.dark .nav-link {
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .nav-link::before,
+  .nav-link.active::before,
+  .navbar .active-link::before {
+    content: none;
   }
 }
 
-@media (max-width: 440px) {
-  .site-header .header-image {
-    width: 11.4rem;
+@media (max-width: 520px) {
+  .site-header {
+    padding: 1.2rem 1.4rem;
   }
 
-  #menu-btn {
-    width: 4rem;
-    height: 4rem;
+  .site-header .header-image {
+    width: 12.2rem;
   }
 
   .header-controls {
@@ -332,5 +312,29 @@ body.dark #darkMode::after {
 
   #buttons img {
     height: 1.8rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .site-header .header-image {
+    width: 10.8rem;
+  }
+
+  #menu-btn {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  #buttons {
+    gap: 0.45rem;
+  }
+
+  #buttons img {
+    height: 1.6rem;
+  }
+
+  body.light #darkMode,
+  body.dark #darkMode {
+    width: 44px;
   }
 }
