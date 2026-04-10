@@ -43,17 +43,13 @@
 .stack-items {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 1.4rem 1.2rem;
 }
 
 .stack-item {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 1.1rem;
-  border-radius: 1.6rem;
-  background: rgba(0, 254, 47, 0.08);
-  border: 1px solid rgba(0, 254, 47, 0.12);
 }
 
 .stack-item-icon {
@@ -61,22 +57,19 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 3.8rem;
-  height: 3.8rem;
-  border-radius: 1.1rem;
-  background: rgba(255, 255, 255, 0.88);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.03);
+  width: 2.8rem;
+  height: 2.8rem;
 }
 
 .stack-item-icon i {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #0f7d13;
 }
 
 .stack-item-svg,
 .stack-item-image {
-  width: 2rem;
-  height: 2rem;
+  width: 2.4rem;
+  height: 2.4rem;
   display: block;
 }
 
@@ -108,15 +101,6 @@ body.dark .stack-card {
 
 body.dark .stack-card h3 {
   color: #f5fff5;
-}
-
-body.dark .stack-item {
-  background: rgba(0, 254, 47, 0.08);
-  border-color: rgba(139, 255, 164, 0.14);
-}
-
-body.dark .stack-item-icon {
-  background: rgba(255, 255, 255, 0.06);
 }
 
 body.dark .stack-item-icon i,

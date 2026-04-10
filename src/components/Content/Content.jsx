@@ -96,14 +96,14 @@ const Content = () => {
           </div>
 
           <div className="redes-sociales">
-            {SOCIAL_LINKS.map((link, index) => (
+            {SOCIAL_LINKS.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-aos="fade-up"
-                data-aos-delay={1250 + index * 120}
+                data-aos-delay={1250}
                 aria-label={link.label}
               >
                 <img src={link.icon} alt={link.label} />
@@ -112,7 +112,7 @@ const Content = () => {
           </div>
 
           <div className="wrapper">
-            {SOCIAL_LINKS.map((link, index) => (
+            {SOCIAL_LINKS.map((link) => (
               <a
                 key={link.label}
                 className="button"
@@ -120,7 +120,7 @@ const Content = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-aos="fade-up"
-                data-aos-delay={1250 + index * 120}
+                data-aos-delay={1250}
               >
                 <div className="icon">
                   <img src={link.icon} alt={link.label} />

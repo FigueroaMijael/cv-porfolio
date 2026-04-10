@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import '../../pages/Project/ProjectPage.css';
 import featuredImage from '../../img/project/nautica-anzuelo-mobile.jpeg';
 import lawyerImage from '../../img/project/draguada.png';
@@ -12,10 +13,12 @@ const PROJECTS_CONTENT = {
       label: 'Featured project',
       title: 'Nautica del Anzuelo',
       summary:
-        'Full Stack e-commerce platform built for a nautical and fishing business, designed to centralize catalog, sales flow, and operational management.',
+        'Full Stack e-commerce platform for a nautical and fishing business, built to centralize catalog, checkout, and daily operations.',
       description:
-        'This build goes beyond a storefront. It is structured as an operational product where customers can browse and buy, while the business can manage products, orders, and critical backend events from a practical workflow.',
+        'Beyond the storefront, it includes operational flows for payments, internal management, and external integrations.',
       stack: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'Mercado Pago', 'Webhooks'],
+      detailsLabel: 'See more details',
+      detailsHideLabel: 'Hide details',
       features: [
         {
           title: 'Admin panel',
@@ -61,10 +64,12 @@ const PROJECTS_CONTENT = {
       label: 'Proyecto destacado',
       title: 'Nautica del Anzuelo',
       summary:
-        'Plataforma e-commerce full stack construida para una marca de náutica y pesca, pensada para centralizar catálogo, ventas y operación diaria.',
+        'Plataforma e-commerce full stack para una marca de náutica y pesca, pensada para centralizar catálogo, checkout y operación diaria.',
       description:
-        'Este desarrollo va mas allá de una tienda visual. Está planteado como un producto operativo donde el usuario puede comprar y el negocio puede administrar productos, pedidos y eventos críticos desde un flujo de trabajo concreto.',
+        'Además de la tienda, resuelve pagos, administración interna e integraciones necesarias para operar de verdad.',
       stack: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'Mercado Pago', 'Webhooks'],
+      detailsLabel: 'Ver más información',
+      detailsHideLabel: 'Ocultar información',
       features: [
         {
           title: 'Admin panel',
@@ -108,6 +113,7 @@ const Projects = () => {
   const { language } = useTranslation();
   const content = PROJECTS_CONTENT[language] || PROJECTS_CONTENT.en;
   const { featured, secondary } = content;
+  const [detailsOpen, setDetailsOpen] = useState(false);
 
   return (
     <section className="projects-section" id="project">
@@ -138,14 +144,27 @@ const Projects = () => {
               ))}
             </div>
 
-            <div className="project-feature-grid">
-              {featured.features.map((feature) => (
-                <article className="project-feature-item" key={feature.title}>
-                  <h4>{feature.title}</h4>
-                  <p>{feature.text}</p>
-                </article>
-              ))}
+            <div className="project-feature-actions">
+              <button
+                type="button"
+                className="project-link-button project-link-button-secondary"
+                onClick={() => setDetailsOpen((current) => !current)}
+              >
+                <i className={`bi ${detailsOpen ? 'bi-dash-circle' : 'bi-plus-circle'}`}></i>
+                {detailsOpen ? featured.detailsHideLabel : featured.detailsLabel}
+              </button>
             </div>
+
+            {detailsOpen && (
+              <div className="project-feature-grid">
+                {featured.features.map((feature) => (
+                  <article className="project-feature-item" key={feature.title}>
+                    <h4>{feature.title}</h4>
+                    <p>{feature.text}</p>
+                  </article>
+                ))}
+              </div>
+            )}
           </div>
         </article>
 

@@ -102,15 +102,15 @@
 }
 
 .project-featured-summary {
-  font-size: 1.9rem;
-  line-height: 1.7;
+  font-size: 1.7rem;
+  line-height: 1.65;
   color: #1d2c1d;
   font-weight: 700;
 }
 
 .project-featured-description {
-  font-size: 1.65rem;
-  line-height: 1.8;
+  font-size: 1.5rem;
+  line-height: 1.7;
   color: #3d4c3d;
 }
 
@@ -138,6 +138,13 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.4rem;
   margin-top: 0.8rem;
+}
+
+.project-feature-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.2rem;
 }
 
 .project-feature-item {
@@ -244,6 +251,17 @@
   background: #153018;
 }
 
+.project-link-button-secondary {
+  border: 1px solid rgba(0, 254, 47, 0.18);
+  background: transparent;
+  color: #0d290f;
+  cursor: pointer;
+}
+
+.project-link-button-secondary:hover {
+  background: rgba(0, 254, 47, 0.08);
+}
+
 body.dark .projects-title,
 body.dark .project-featured-title,
 body.dark .project-title {
@@ -289,6 +307,16 @@ body.dark .project-link-button {
 
 body.dark .project-link-button:hover {
   background: #68ff87;
+}
+
+body.dark .project-link-button-secondary {
+  background: transparent;
+  color: #d8ffe0;
+  border-color: rgba(139, 255, 164, 0.18);
+}
+
+body.dark .project-link-button-secondary:hover {
+  background: rgba(139, 255, 164, 0.08);
 }
 
 body.dark .project-featured-frame {
