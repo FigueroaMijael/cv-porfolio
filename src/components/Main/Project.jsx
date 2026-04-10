@@ -1,6 +1,5 @@
 import '../../pages/Project/ProjectPage.css';
-import featuredImage from '../../img/project/Anzuelo.png';
-import commerceImage from '../../img/project/E-ecommersBackend.png';
+import featuredImage from '../../img/project/nautica-anzuelo-mobile.jpeg';
 import lawyerImage from '../../img/project/draguada.png';
 import { useTranslation } from '../../Context/Languaje-context';
 
@@ -41,15 +40,6 @@ const PROJECTS_CONTENT = {
       ],
     },
     secondary: [
-      {
-        title: 'Back-Commerse',
-        description:
-          'End-to-end e-commerce application with user registration, login, cart flow, role-based behavior, profile configuration, and payment processing support.',
-        stack: ['React', 'JavaScript', 'MongoDB'],
-        link: 'https://myproyectfinals-production.up.railway.app',
-        github: 'https://github.com/FigueroaMijael/MyProyectFinals',
-        image: commerceImage,
-      },
       {
         title: 'Abogada Guadalupe Lizarazo',
         description:
@@ -100,15 +90,6 @@ const PROJECTS_CONTENT = {
     },
     secondary: [
       {
-        title: 'Back-Commerse',
-        description:
-          'Aplicación e-commerce de punta a punta con registro y login de usuarios, carrito, comportamiento por roles, configuración de perfil y soporte para checkout con pagos.',
-        stack: ['React', 'JavaScript', 'MongoDB'],
-        link: 'https://myproyectfinals-production.up.railway.app',
-        github: 'https://github.com/FigueroaMijael/MyProyectFinals',
-        image: commerceImage,
-      },
-      {
         title: 'Abogada Guadalupe Lizarazo',
         description:
           'Sitio profesional de servicios diseñado para comunicar especialidades legales con claridad, reforzar confianza y convertir visitas en oportunidades de contacto.',
@@ -138,7 +119,9 @@ const Projects = () => {
 
         <article className="project-featured-card">
           <div className="project-featured-media" data-aos="fade-right" data-aos-delay="180">
-            <img alt={featured.title} className="project-featured-image" loading="lazy" src={featuredImage} />
+            <div className="project-featured-frame">
+              <img alt={featured.title} className="project-featured-image" loading="lazy" src={featuredImage} />
+            </div>
           </div>
 
           <div className="project-featured-content" data-aos="fade-left" data-aos-delay="220">

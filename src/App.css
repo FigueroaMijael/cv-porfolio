@@ -49,6 +49,10 @@ body.dark{
     color: #f3fff3;
 }
 
+body.menu-open{
+    overflow: hidden;
+}
+
 main,
 .main {
     padding:2rem 8%;

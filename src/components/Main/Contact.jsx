@@ -86,9 +86,17 @@ const Contact = () => {
             data-aos="fade-up"
             data-aos-delay={220 + index * 80}
           >
-            <span className="contact-card-icon" aria-hidden="true">
-              <i className={channel.icon}></i>
-            </span>
+            <div className="contact-card-visual" aria-hidden="true">
+              <div className="contact-layer">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span className="contact-layer-icon">
+                  <i className={channel.icon}></i>
+                </span>
+              </div>
+            </div>
             <div className="contact-card-copy">
               <strong>{channel.label}</strong>
               <span>{channel.value}</span>

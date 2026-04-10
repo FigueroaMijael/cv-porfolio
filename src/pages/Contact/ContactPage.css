@@ -30,14 +30,15 @@
 .contact-card {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 1.4rem;
+  gap: 1.8rem;
   align-items: center;
-  padding: 2rem;
+  padding: 2rem 2.1rem;
   border-radius: 2rem;
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(22, 65, 18, 0.08);
   box-shadow: 0 16px 30px rgba(8, 25, 9, 0.08);
   color: inherit;
+  overflow: hidden;
 }
 
 .contact-card:hover {
@@ -45,21 +46,63 @@
   box-shadow: 0 22px 36px rgba(8, 25, 9, 0.12);
 }
 
-.contact-card-icon {
-  display: inline-flex;
+.contact-card-visual {
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 5.4rem;
-  height: 5.4rem;
-  border-radius: 1.5rem;
+  min-width: 7rem;
+}
+
+.contact-layer {
+  position: relative;
+  width: 6.2rem;
+  height: 6.2rem;
+}
+
+.contact-layer span {
+  position: absolute;
+  inset: 0;
+  border-radius: 1.4rem;
+  border: 2px solid rgba(15, 124, 18, 0.45);
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-layer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: rgba(0, 254, 47, 0.12);
   color: #0a7c12;
-  font-size: 2.1rem;
+  font-size: 2rem;
+}
+
+.contact-card:hover .contact-layer span:nth-child(1) {
+  transform: translate(4px, -4px);
+  opacity: 0.25;
+}
+
+.contact-card:hover .contact-layer span:nth-child(2) {
+  transform: translate(8px, -8px);
+  opacity: 0.45;
+}
+
+.contact-card:hover .contact-layer span:nth-child(3) {
+  transform: translate(12px, -12px);
+  opacity: 0.65;
+}
+
+.contact-card:hover .contact-layer span:nth-child(4) {
+  transform: translate(16px, -16px);
+  opacity: 0.85;
+}
+
+.contact-card:hover .contact-layer-icon {
+  box-shadow: -1px 1px 10px rgba(0, 254, 47, 0.3);
 }
 
 .contact-card-copy {
   display: grid;
-  gap: 0.5rem;
+  gap: 0.45rem;
 }
 
 .contact-card strong {
@@ -84,7 +127,11 @@ body.dark .contact-card {
   box-shadow: 0 18px 32px rgba(0, 0, 0, 0.34);
 }
 
-body.dark .contact-card-icon {
+body.dark .contact-layer span {
+  border-color: rgba(120, 255, 150, 0.38);
+}
+
+body.dark .contact-layer-icon {
   background: rgba(0, 254, 47, 0.1);
   color: #89ff9d;
 }
@@ -106,9 +153,19 @@ body.dark .contact-card span {
 @media (max-width: 520px) {
   .contact-card {
     padding: 1.8rem;
+    gap: 1.4rem;
   }
 
-  .contact-card {
-    grid-template-columns: 1fr;
+  .contact-layer {
+    width: 5.6rem;
+    height: 5.6rem;
+  }
+
+  .contact-card strong {
+    font-size: 1.7rem;
+  }
+
+  .contact-card span {
+    font-size: 1.35rem;
   }
 }

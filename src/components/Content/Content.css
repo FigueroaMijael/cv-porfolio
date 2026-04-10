@@ -13,12 +13,14 @@
 .inicio {
   display: flex;
   justify-content: center;
-  padding: 0 2rem 5rem;
+  align-items: center;
+  min-height: 100vh;
+  padding: 19rem 2rem 8rem;
 }
 
 .inicio .titulo {
   width: min(100%, 104rem);
-  margin: 18rem auto 0;
+  margin: 0 auto;
   text-align: center;
   z-index: 200 !important;
 }
@@ -277,7 +279,7 @@
 
 @media (max-width: 990px) {
   .inicio .titulo {
-    margin-top: 16rem;
+    max-width: 90rem;
   }
 
   .scroll-down {
@@ -291,11 +293,20 @@
   }
 
   .inicio {
-    padding: 0 2rem 4rem;
+    min-height: auto;
+    padding: 16rem 2rem 6rem;
   }
 
   .inicio .titulo {
-    margin-top: 15rem;
+    width: min(100%, 72rem);
+  }
+
+  .hero-description {
+    max-width: 62rem;
+  }
+
+  .hero-badges {
+    max-width: 64rem;
   }
 }
 
@@ -306,10 +317,21 @@
 
   .titulo .redes-sociales {
     display: flex;
+    flex-wrap: wrap;
   }
 
   .inicio .titulo {
-    margin-top: 14rem;
+    width: 100%;
+  }
+
+  .hero-description {
+    font-size: 1.75rem;
+  }
+
+  .hero-badges span {
+    min-height: 3.8rem;
+    padding: 0.8rem 1.2rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -318,12 +340,15 @@
     min-height: 60rem;
   }
 
+  .inicio {
+    padding: 15rem 1.6rem 5rem;
+  }
+
   .hero-badges {
     justify-content: flex-start;
   }
 
   .inicio .titulo {
-    margin-top: 12.5rem;
     text-align: left;
   }
 
