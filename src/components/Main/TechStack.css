@@ -1,0 +1,96 @@
+.stack-section {
+  padding-top: 5rem;
+}
+
+.stack-header {
+  max-width: 72rem;
+  margin: 0 auto 3.2rem;
+  text-align: center;
+}
+
+.stack-header p,
+.stack-card h3,
+.stack-badge {
+  text-transform: none;
+}
+
+.stack-header p {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: #425242;
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.8rem;
+}
+
+.stack-card {
+  padding: 2.4rem 2rem;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(22, 65, 18, 0.08);
+  box-shadow: 0 16px 30px rgba(8, 25, 9, 0.08);
+}
+
+.stack-card h3 {
+  font-size: 2rem;
+  color: #0d180d;
+  margin-bottom: 1.6rem;
+}
+
+.stack-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.stack-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.2rem;
+  border-radius: 999px;
+  background: rgba(0, 254, 47, 0.09);
+  border: 1px solid rgba(0, 254, 47, 0.15);
+  color: #0d290f;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+body.dark .stack-header p {
+  color: #b9c8ba;
+}
+
+body.dark .stack-card {
+  background: rgba(11, 16, 11, 0.96);
+  border-color: rgba(139, 255, 164, 0.08);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.32);
+}
+
+body.dark .stack-card h3 {
+  color: #f5fff5;
+}
+
+body.dark .stack-badge {
+  background: rgba(0, 254, 47, 0.09);
+  border-color: rgba(139, 255, 164, 0.16);
+  color: #c9ffd2;
+}
+
+@media (max-width: 1100px) {
+  .stack-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .stack-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stack-card {
+    padding: 2rem 1.8rem;
+  }
+}

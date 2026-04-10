@@ -1,0 +1,243 @@
+.about-section {
+  padding-top: 3rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: 3rem;
+  align-items: stretch;
+}
+
+.about-copy-card,
+.about-highlight-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(22, 65, 18, 0.08);
+  border-radius: 2.4rem;
+  box-shadow: 0 24px 45px rgba(8, 25, 9, 0.1);
+}
+
+.about-copy-card {
+  padding: clamp(2.8rem, 4vw, 4rem);
+}
+
+.about-eyebrow,
+.about-title,
+.about-paragraphs p,
+.about-meta-item span,
+.about-meta-item strong,
+.about-highlight-card h3,
+.about-highlight-card p,
+.about-button {
+  text-transform: none;
+}
+
+.about-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.6rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  background: rgba(0, 254, 47, 0.12);
+  color: #0f7d13;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.about-title {
+  font-size: clamp(3rem, 4vw, 4.6rem);
+  line-height: 1.1;
+  color: #071607;
+  margin-bottom: 2rem;
+}
+
+.about-paragraphs {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.about-paragraphs p {
+  font-size: 1.7rem;
+  line-height: 1.8;
+  color: #2a362a;
+}
+
+.about-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4rem;
+  margin-top: 2.8rem;
+}
+
+.about-meta-item {
+  padding: 1.6rem;
+  border-radius: 1.6rem;
+  background: rgba(15, 20, 15, 0.04);
+  border: 1px solid rgba(18, 55, 18, 0.08);
+}
+
+.about-meta-item span {
+  display: block;
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  color: #5b715c;
+  margin-bottom: 0.8rem;
+}
+
+.about-meta-item strong {
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #0c190b;
+}
+
+.about-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  margin-top: 2.8rem;
+}
+
+.about-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 5rem;
+  padding: 1.2rem 2rem;
+  border-radius: 999px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.about-button-primary {
+  background: #00fe2f;
+  color: #042907;
+  box-shadow: 0 16px 26px rgba(0, 254, 47, 0.2);
+}
+
+.about-button-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 30px rgba(0, 254, 47, 0.26);
+}
+
+.about-button-secondary {
+  border: 1px solid rgba(10, 36, 10, 0.12);
+  background: transparent;
+  color: #0d1d0d;
+}
+
+.about-button-secondary:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 254, 47, 0.4);
+}
+
+.about-highlights {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.about-highlight-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.6rem;
+  padding: 2.2rem;
+}
+
+.about-highlight-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1.4rem;
+  background: linear-gradient(135deg, #00fe2f 0%, #0f7d13 100%);
+  color: #031104;
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.about-highlight-card h3 {
+  font-size: 2.1rem;
+  color: #0a1809;
+  margin-bottom: 1rem;
+}
+
+.about-highlight-card p {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #314031;
+}
+
+body.dark .about-copy-card,
+body.dark .about-highlight-card {
+  background: rgba(13, 18, 13, 0.95);
+  border-color: rgba(95, 255, 131, 0.08);
+  box-shadow: 0 28px 40px rgba(0, 0, 0, 0.35);
+}
+
+body.dark .about-eyebrow {
+  background: rgba(0, 254, 47, 0.14);
+  color: #88ff9d;
+}
+
+body.dark .about-title,
+body.dark .about-meta-item strong,
+body.dark .about-highlight-card h3 {
+  color: #f5fff5;
+}
+
+body.dark .about-paragraphs p,
+body.dark .about-highlight-card p {
+  color: #c4d2c4;
+}
+
+body.dark .about-meta-item {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark .about-meta-item span {
+  color: #7ed18c;
+}
+
+body.dark .about-button-secondary {
+  border-color: rgba(139, 255, 164, 0.18);
+  color: #f0fff0;
+}
+
+@media (max-width: 990px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-meta {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-copy-card {
+    padding: 2.4rem 2rem;
+  }
+
+  .about-highlight-card {
+    grid-template-columns: 1fr;
+  }
+
+  .about-highlight-index {
+    width: 4.4rem;
+    height: 4.4rem;
+  }
+
+  .about-actions {
+    flex-direction: column;
+  }
+
+  .about-button {
+    width: 100%;
+  }
+}

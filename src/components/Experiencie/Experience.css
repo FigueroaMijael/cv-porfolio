@@ -5,203 +5,140 @@ ol {
 }
 
 .experience-timeline {
-  --timeline-axis: 4.2rem;
-  margin: 6rem auto 0;
-  width: min(100%, 112rem);
-  padding: 2rem 2rem 2rem 0;
+  width: 100%;
+  padding: 5rem 2rem 0 4.8rem;
   position: relative;
 }
 
 .experience-timeline::before {
   content: '';
   position: absolute;
-  top: 8.8rem;
-  bottom: 1.5rem;
-  left: var(--timeline-axis);
-  width: 3px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, rgba(51, 206, 25, 0.8) 0%, rgba(58, 58, 58, 0.25) 100%);
+  top: 11.2rem;
+  bottom: 0;
+  left: 2.5rem;
+  width: 2px;
+  background: rgba(13, 36, 12, 0.18);
 }
 
 .timeline-title {
   display: inline-flex;
   align-items: center;
   gap: 1.2rem;
-  font-size: 4rem;
-  font-weight: 700;
-  color: #00a511;
-  margin: 0 0 3.4rem;
+  font-size: clamp(3rem, 4vw, 4.2rem);
+  font-weight: 800;
+  color: #0b7f12;
+  margin-bottom: 3rem;
+  text-transform: none;
 }
 
 .bi-briefcase-fill {
   font-size: 3.4rem;
 }
 
-body.dark .timeline-title {
-  color: #1dff2d;
-}
-
 .timeline-list {
   position: relative;
   z-index: 1;
   display: grid;
-  gap: 2.8rem;
-  margin: 0;
-  padding: 0;
+  gap: 3rem;
 }
 
 .timeline-item {
   position: relative;
-  padding-left: 8.6rem;
+  padding-left: 3.8rem;
 }
 
 .timeline-item::before {
   content: '';
   position: absolute;
-  top: 3.4rem;
-  left: var(--timeline-axis);
-  width: 1.8rem;
-  height: 1.8rem;
+  top: 2rem;
+  left: 2.5rem;
+  width: 1.6rem;
+  height: 1.6rem;
   border-radius: 50%;
-  background: #34dd24;
-  border: 4px solid #ecffe8;
+  background: #00fe2f;
+  border: 4px solid #eaffea;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 0 7px rgba(52, 221, 36, 0.18);
-}
-
-.timeline-item::after {
-  content: '';
-  position: absolute;
-  top: 3.4rem;
-  left: calc(var(--timeline-axis) + 0.9rem);
-  width: 3.6rem;
-  height: 2px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, rgba(52, 221, 36, 0.9) 0%, rgba(52, 221, 36, 0.12) 100%);
-  transform: translateY(-50%);
+  box-shadow: 0 0 0 4px rgba(0, 254, 47, 0.15);
 }
 
 .experience-item {
-  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
-  padding: 2.6rem 2.8rem;
-  background:
-    linear-gradient(135deg, rgba(52, 221, 36, 0.08) 0%, rgba(52, 221, 36, 0) 35%),
-    #ffffff;
-  border: 1px solid rgba(14, 51, 18, 0.08);
-  border-radius: 1.8rem;
-  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.12);
-  overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  gap: 1.4rem;
+  padding: 2.8rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 2rem;
+  border: 1px solid rgba(22, 65, 18, 0.08);
+  box-shadow: 0 18px 35px rgba(8, 25, 9, 0.1);
 }
 
-.experience-item::before {
-  content: '';
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 0.55rem;
-  background: linear-gradient(180deg, #34dd24 0%, #118205 100%);
-}
-
-.experience-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 26px 50px rgba(0, 0, 0, 0.16);
-  border-color: rgba(52, 221, 36, 0.28);
-}
-
-.experience-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1.8rem;
-  flex-wrap: wrap;
-}
-
-.experience-heading {
-  display: grid;
-  gap: 0.8rem;
+.experience-title,
+.experience-company,
+.experience-date,
+.experience-description p,
+.experience-highlights li,
+.link-inline {
+  text-transform: none;
 }
 
 .experience-title {
-  margin: 0;
   font-size: 2.4rem;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #0f9f13;
-}
-
-body.dark .experience-title {
-  color: #30ff3d;
+  font-weight: 800;
+  color: #0b7f12;
+  margin-bottom: 0.6rem;
 }
 
 .experience-company {
-  margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 600;
-  line-height: 1.5;
-  color: #425140;
-}
-
-body.dark .experience-company {
-  color: #b7c7b4;
-}
-
-.experience-meta {
-  display: inline-flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.experience-badge,
-.experience-date {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 3.4rem;
-  padding: 0.7rem 1.25rem;
-  border-radius: 999px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-}
-
-.experience-badge {
-  color: #0b6f0e;
-  background: rgba(52, 221, 36, 0.12);
-  border: 1px solid rgba(52, 221, 36, 0.25);
+  color: #334233;
 }
 
 .experience-date {
-  color: rgba(44, 57, 46, 0.9);
-  background: rgba(18, 18, 18, 0.05);
-  border: 1px solid rgba(18, 18, 18, 0.08);
+  font-size: 1.3rem;
+  letter-spacing: 0.08em;
+  color: #6b7b6c;
 }
 
 .experience-description {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  color: #4a4a4a;
+  display: grid;
+  gap: 1.5rem;
 }
 
 .experience-description p {
-  margin: 0;
-  max-width: 72ch;
-  font-size: 1.55rem;
-  line-height: 1.85;
+  font-size: 1.65rem;
+  line-height: 1.8;
+  color: #384738;
 }
 
-body.dark .experience-description {
-  color: #d0d0d0;
+.experience-highlights {
+  display: grid;
+  gap: 1rem;
+}
+
+.experience-highlights li {
+  position: relative;
+  padding-left: 2rem;
+  font-size: 1.55rem;
+  line-height: 1.75;
+  color: #425242;
+}
+
+.experience-highlights li::before {
+  content: '';
+  position: absolute;
+  top: 0.95rem;
+  left: 0;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: #00d82f;
 }
 
 .link-inline {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #2d8a1f;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #0b7f12;
   text-decoration: none;
   width: fit-content;
 }
@@ -210,102 +147,66 @@ body.dark .experience-description {
   text-decoration: underline;
 }
 
-body.dark .experience-item {
-  background:
-    linear-gradient(135deg, rgba(79, 255, 35, 0.1) 0%, rgba(79, 255, 35, 0) 35%),
-    #161616;
-  border-color: rgba(79, 255, 35, 0.14);
-  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.42);
-}
-
-body.dark .experience-item::before {
-  background: linear-gradient(180deg, #4fff23 0%, #149800 100%);
+body.dark .timeline-title,
+body.dark .experience-title,
+body.dark .link-inline {
+  color: #7fff95;
 }
 
 body.dark .experience-timeline::before {
-  background: linear-gradient(180deg, rgba(79, 255, 35, 0.9) 0%, rgba(204, 204, 204, 0.2) 100%);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 body.dark .timeline-item::before {
-  background: #4fff23;
-  border-color: #0f1d0d;
-  box-shadow: 0 0 0 7px rgba(79, 255, 35, 0.16);
+  background: #32ff60;
+  border-color: #102214;
+  box-shadow: 0 0 0 4px rgba(50, 255, 96, 0.16);
 }
 
-body.dark .timeline-item::after {
-  background: linear-gradient(90deg, rgba(79, 255, 35, 0.9) 0%, rgba(79, 255, 35, 0.12) 100%);
+body.dark .experience-item {
+  background: rgba(11, 16, 11, 0.96);
+  border-color: rgba(139, 255, 164, 0.08);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35);
 }
 
-body.dark .experience-badge {
-  color: #d9ffd1;
-  background: rgba(79, 255, 35, 0.14);
-  border-color: rgba(79, 255, 35, 0.22);
+body.dark .experience-company {
+  color: #dff0df;
 }
 
 body.dark .experience-date {
-  color: rgba(220, 220, 220, 0.9);
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.08);
+  color: #90a690;
+}
+
+body.dark .experience-description p,
+body.dark .experience-highlights li {
+  color: #bdcbbd;
 }
 
 @media (max-width: 768px) {
   .experience-timeline {
-    --timeline-axis: 3.1rem;
-    padding: 2rem 1rem 2rem 0;
+    padding: 4rem 1rem 0 3.8rem;
   }
 
-  .experience-timeline::before {
-    top: 8.1rem;
+  .experience-timeline::before,
+  .timeline-item::before {
+    left: 2rem;
   }
 
   .timeline-item {
-    padding-left: 6.3rem;
-  }
-
-  .timeline-item::after {
-    width: 2.3rem;
+    padding-left: 2.8rem;
   }
 
   .experience-item {
     padding: 2.2rem 2rem;
   }
-
-  .experience-title {
-    font-size: 2.1rem;
-  }
 }
 
 @media (max-width: 520px) {
   .experience-timeline {
-    --timeline-axis: 2.4rem;
-    padding: 1.5rem 0.4rem 2rem 0;
-  }
-
-  .timeline-title {
-    font-size: 3rem;
-    margin-bottom: 2.8rem;
-  }
-
-  .timeline-item {
-    padding-left: 4.8rem;
-  }
-
-  .timeline-item::before,
-  .timeline-item::after {
-    top: 3rem;
-  }
-
-  .timeline-item::after {
-    width: 1.6rem;
+    padding-top: 3.2rem;
   }
 
   .experience-item {
-    padding: 2rem 1.6rem 2rem 1.8rem;
-    border-radius: 1.5rem;
-  }
-
-  .experience-description p {
-    font-size: 1.45rem;
-    line-height: 1.75;
+    padding: 2rem 1.7rem;
   }
 }

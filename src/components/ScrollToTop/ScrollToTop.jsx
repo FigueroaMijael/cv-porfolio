@@ -1,4 +1,3 @@
-import React from 'react';
 import {useEffect, useState} from 'react';
 
 import './ScrollToTop.css';
@@ -27,7 +26,7 @@ const ScrollToTop = () => {
             {backToTopButtom && (
                 <button className='cm-up' onClick={scrollUp}> 
                     <span className="cm-icon">
-                        <i class="bi bi-chevron-up"></i>
+                        <i className="bi bi-chevron-up"></i>
                     </span>
                 </button>
             )}

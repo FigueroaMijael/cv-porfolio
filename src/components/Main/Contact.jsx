@@ -1,77 +1,98 @@
 import '../../pages/Contact/ContactPage.css';
-import Typical from 'react-typical';
 import { useTranslation } from '../../Context/Languaje-context';
 
+const CONTACT_CONTENT = {
+  en: {
+    heading: 'Contact',
+    intro: 'If you need a Full Stack Developer to build, improve, or scale a product, these are the fastest ways to reach me.',
+    channels: [
+      {
+        label: 'Email',
+        value: 'figueroamijael86@gmail.com',
+        href: 'mailto:figueroamijael86@gmail.com',
+        icon: 'bi bi-envelope-at',
+      },
+      {
+        label: 'LinkedIn',
+        value: 'linkedin.com/in/mijael-figueroa-019952249',
+        href: 'https://www.linkedin.com/in/mijael-figueroa-019952249?trk=contact-info',
+        icon: 'bi bi-linkedin',
+      },
+      {
+        label: 'GitHub',
+        value: 'github.com/FigueroaMijael',
+        href: 'https://github.com/FigueroaMijael',
+        icon: 'bi bi-github',
+      },
+      {
+        label: 'WhatsApp',
+        value: '+54 11 3681-7159',
+        href: 'https://api.whatsapp.com/send?phone=541136817159',
+        icon: 'bi bi-whatsapp',
+      },
+    ],
+  },
+  es: {
+    heading: 'Contacto',
+    intro: 'Si necesitás un Full Stack Developer para construir, mejorar o escalar un producto, estos son los canales más directos para contactarme.',
+    channels: [
+      {
+        label: 'Email',
+        value: 'figueroamijael86@gmail.com',
+        href: 'mailto:figueroamijael86@gmail.com',
+        icon: 'bi bi-envelope-at',
+      },
+      {
+        label: 'LinkedIn',
+        value: 'linkedin.com/in/mijael-figueroa-019952249',
+        href: 'https://www.linkedin.com/in/mijael-figueroa-019952249?trk=contact-info',
+        icon: 'bi bi-linkedin',
+      },
+      {
+        label: 'GitHub',
+        value: 'github.com/FigueroaMijael',
+        href: 'https://github.com/FigueroaMijael',
+        icon: 'bi bi-github',
+      },
+      {
+        label: 'WhatsApp',
+        value: '+54 11 3681-7159',
+        href: 'https://api.whatsapp.com/send?phone=541136817159',
+        icon: 'bi bi-whatsapp',
+      },
+    ],
+  },
+};
+
 const Contact = () => {
-  const { translate } = useTranslation();
-  const contactChannels = translate('contactChannels');
-  const typingSteps = contactChannels.flatMap((channel) => [channel, 2500]);
-  const contactLinks = [
-    {
-      href: 'mailto:figueroamijael86@gmail.com',
-      label: contactChannels[0],
-      iconClass: 'bi bi-envelope-at-fill',
-      wrapperClass: 'fab fas fa-envelope',
-    },
-    {
-      href: 'https://api.whatsapp.com/send?phone=1136817159',
-      label: contactChannels[1],
-      iconClass: 'bi bi-whatsapp',
-      wrapperClass: 'fab fa-whatsapp',
-    },
-    {
-      href: 'https://www.instagram.com/figuee15_/',
-      label: contactChannels[2],
-      iconClass: 'bi bi-instagram',
-      wrapperClass: 'fab fa-instagram',
-    },
-    {
-      href: 'https://t.me/1136817159',
-      label: contactChannels[3],
-      iconClass: 'bi bi-telegram',
-      wrapperClass: 'fab fa-telegram',
-    },
-    {
-      href: 'https://www.linkedin.com/in/mijael-figueroa-019952249?trk=contact-info',
-      label: contactChannels[4],
-      iconClass: 'bi bi-linkedin',
-      wrapperClass: 'fab fa-linkedin-in',
-    },
-    {
-      href: 'https://github.com/FigueroaMijael',
-      label: contactChannels[5],
-      iconClass: 'bi bi-github',
-      wrapperClass: 'fab fa-github-square',
-    },
-  ];
+  const { language } = useTranslation();
+  const content = CONTACT_CONTENT[language] || CONTACT_CONTENT.en;
 
   return (
     <section className="contactos" id="contact">
-      <h2 className="heading">{translate('contact')}</h2>
-      <h3 className="titulo" data-aos="fade-left" data-aos-delay="300">
-        {translate('medioContact')}{' '}
-        <Typical className="site-contacto" loop={Infinity} wrapper="b" steps={typingSteps} />
-      </h3>
+      <div className="contact-copy" data-aos="fade-up" data-aos-delay="150">
+        <h2 className="heading">{content.heading}</h2>
+        <p>{content.intro}</p>
+      </div>
 
-      <div className="icons">
-        {contactLinks.map((contactLink) => (
+      <div className="contact-grid">
+        {content.channels.map((channel, index) => (
           <a
-            key={contactLink.label}
-            href={contactLink.href}
+            className="contact-card"
+            href={channel.href}
+            key={channel.label}
             target="_blank"
             rel="noopener noreferrer"
-            data-aos="zoom-in"
+            data-aos="fade-up"
+            data-aos-delay={220 + index * 80}
           >
-            <div className="layer">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span className={contactLink.wrapperClass}>
-                <i className={contactLink.iconClass}></i>
-              </span>
+            <span className="contact-card-icon" aria-hidden="true">
+              <i className={channel.icon}></i>
+            </span>
+            <div className="contact-card-copy">
+              <strong>{channel.label}</strong>
+              <span>{channel.value}</span>
             </div>
-            <div className="text">{contactLink.label}</div>
           </a>
         ))}
       </div>

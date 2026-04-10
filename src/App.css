@@ -27,7 +27,7 @@
     box-sizing: border-box;
     border: none;
     text-decoration: none;
-    text-transform: capitalize;
+    text-transform: none;
     transition: all .2s linear;
 }
 
@@ -37,6 +37,16 @@ html{
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
+}
+
+body{
+    background: #f5faf5;
+    color: #0c190b;
+}
+
+body.dark{
+    background: #040704;
+    color: #f3fff3;
 }
 
 main,
@@ -98,6 +108,11 @@ animation: FIGUEDEV 3s ease-in-out infinite;
     margin-top: 5rem;
     font-size: 4.5rem;
     color: var(--black);
+    text-transform: none;
+}
+
+body.dark .heading{
+    color: var(--white);
 }
 
 .service-page .heading{

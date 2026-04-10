@@ -1,9 +1,9 @@
-import React from 'react'
 import About from './About'
 import Service from './Service'
 import Project from './Project'
 import Contact from './Contact'
 import ExperienceList from '../Experiencie/ExperienceList'
+import TechStack from './TechStack'
 
 const Main = () => {
   return (
@@ -13,6 +13,8 @@ const Main = () => {
       <Service />
 
       <ExperienceList />
+
+      <TechStack />
 
       <Project />
 

@@ -1,5 +1,5 @@
 import './App.css'
-import React, {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 import { Route, Routes } from 'react-router-dom'
 
 // Pages
@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
       const timeoutId = setTimeout(() => {
           setLoading(false)
-      }, 4000)
+      }, 1600)
 
       return () => clearTimeout(timeoutId)
   }, [])

@@ -55,8 +55,11 @@ const Header = () => {
                 <Link to="about-me" spy={true} offset={-150}>
                     <p>{translate('aboutMe')}</p>
                 </Link>
-                <Link to="services" spy={true} offset={-150}>
+                <Link to="build" spy={true} offset={-150}>
                     <p>{translate('services')}</p>
+                </Link>
+                <Link to="stack" spy={true} offset={-150}>
+                    <p>{translate('stack')}</p>
                 </Link>
                 <Link to="project" spy={true} offset={-150}>
                     <p>{translate('projects')}</p>
