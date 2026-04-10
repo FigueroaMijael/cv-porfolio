@@ -49,7 +49,7 @@ body.dark .site-header {
 
 .nav-link {
   text-decoration: none;
-  font-size: 1.7rem;
+  font-size: 1.82rem;
   font-weight: 700;
   line-height: 1.2;
   color: var(--black);
@@ -196,7 +196,7 @@ body.dark #darkMode::after {
   }
 
   .nav-link {
-    font-size: 1.55rem;
+    font-size: 1.65rem;
   }
 
   #buttons img {
