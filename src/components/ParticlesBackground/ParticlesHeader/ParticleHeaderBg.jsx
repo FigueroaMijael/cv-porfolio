@@ -1,16 +1,10 @@
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo } from "react";
 import Particles from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 
-const ParticleHeaderBg = (props) => {
-  const [init, setInit] = useState(false);
-
+const ParticleHeaderBg = ({ id }) => {
   useEffect(() => {
-    const initParticles = async () => {
-      await loadFull();
-      setInit(true);
-    };
-    initParticles();
+    void loadFull();
   }, []);
 
   const options = useMemo(() => ({
@@ -113,7 +107,7 @@ const ParticleHeaderBg = (props) => {
     },
   }), []);
 
-  return <Particles className="particles-2-css" id={props.id} options={options} />;
+  return <Particles className="particles-2-css" id={id} options={options} />;
 };
 
 export default ParticleHeaderBg;

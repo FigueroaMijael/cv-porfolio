@@ -1,6 +1,6 @@
 /* Dark Mode Styles */
 body.dark {
-  background: rgb(14, 12, 12);
+  background: #040704;
 }
 
 body.dark .heading {
@@ -16,28 +16,6 @@ body.dark .btn-codigo {
 body.dark .btn-codigo:hover {
   background: var(--white);
   color: var(--black);
-}
-
-/* Header */
-body.dark .site-header {
-  background: #111111;
-}
-
-body.dark .navbar.activar {
-  background-color: #111;
-}
-
-body.dark .logo span {
-  color: var(--white);
-}
-
-body.dark .navbar a {
-  color: var(--white);
-}
-
-body.dark .navbar a.active::before,
-body.dark .navbar .active-link::before {
-  background: var(--green);
 }
 
 /* Sobre Mi */
@@ -89,38 +67,6 @@ body.dark .servicios .row .columns:hover i {
 
 body.dark .servicios .row h3 {
   color: var(--white) !important;
-}
-
-/* Proyectos */
-body.dark .proyectos .proyectos-slider .caja .content h3 {
-  color: var(--white);
-}
-
-body.dark .proyectos .proyectos-slider .caja .content p {
-  color: var (--light-color);
-}
-
-body.dark .proyectos .proyectos-slider .caja .content p span {
-  color: var(--white);
-}
-
-body.dark .proyectos .swiper .swiper-pagination-bullets .swiper-pagination-bullet {
-  background: var(--white);
-}
-
-/* Contactos */
-body.dark .contactos .titulo {
-  color: var(--white);
-}
-
-body.dark .contactos .site-contacto {
-  color: var(--green);
-}
-
-body.dark .icons a:nth-child(6) .layer span,
-body.dark .icons a:nth-child(6) .text {
-  color: #fff;
-  border-color: #fff;
 }
 
 /* Boton up */

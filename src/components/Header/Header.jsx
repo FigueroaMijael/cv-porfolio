@@ -98,7 +98,7 @@ const Header = () => {
                 </Link>
             </div>
 
-            <nav id="site-navigation" className={`navbar ${menuOpen ? 'activar' : ''}`}>
+            <nav id="site-navigation" className={`site-nav ${menuOpen ? 'activar' : ''}`}>
                 {navItems.map((item) => (
                     <Link
                         key={item.to}
@@ -108,7 +108,7 @@ const Header = () => {
                         spy={true}
                         smooth={true}
                         offset={-120}
-                        duration={500}
+                        duration={200}
                         onClick={closeMenu}
                     >
                         {item.label}

@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTranslation } from '../../Context/Languaje-context';
 import HeaderPage from '../../components/Header/HeaderPage';
 import ParticlesBackground from '../../components/ParticlesBackground/ParticlesBackground';

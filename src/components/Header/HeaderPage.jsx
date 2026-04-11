@@ -95,7 +95,7 @@ const HeaderPage = () => {
                 </Link>
             </div>
 
-            <nav id="site-navigation-page" className={`navbar ${menuOpen ? 'activar' : ''}`}>
+            <nav id="site-navigation-page" className={`site-nav ${menuOpen ? 'activar' : ''}`}>
                 {navItems.map((item) => (
                     <Link key={item.to} className="nav-link" to={item.to} onClick={closeMenu}>
                         {item.label}

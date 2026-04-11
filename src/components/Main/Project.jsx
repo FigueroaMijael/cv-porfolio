@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import '../../pages/Project/ProjectPage.css';
-import featuredImage from '../../img/project/nautica-anzuelo-mobile.jpeg';
+import nauticaMobileImage from '../../img/project/nautica-anzuelo-mobile.jpeg';
+import nauticaDesktopImage from '../../img/project/Anzuelo.png';
 import lawyerImage from '../../img/project/draguada.png';
 import { useTranslation } from '../../Context/Languaje-context';
 
@@ -9,111 +10,192 @@ const PROJECTS_CONTENT = {
     heading: 'Projects',
     intro:
       'A selection of full stack work focused on business use cases, operational flows, and applications designed to be used beyond the demo stage.',
-    featured: {
-      label: 'Featured project',
-      title: 'Nautica del Anzuelo',
-      summary:
-        'Full Stack e-commerce platform for a nautical and fishing business, built to centralize catalog, checkout, and daily operations.',
-      description:
-        'Beyond the storefront, it includes operational flows for payments, internal management, and external integrations.',
-      stack: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'Mercado Pago', 'Webhooks'],
-      detailsLabel: 'See more details',
-      detailsHideLabel: 'Hide details',
-      features: [
-        {
-          title: 'Admin panel',
-          text: 'Centralized management for products, inventory visibility, media, and order updates.',
-        },
-        {
-          title: 'Payment integration',
-          text: 'Checkout connected to Mercado Pago to support secure purchase flows and payment confirmation.',
-        },
-        {
-          title: 'Webhooks',
-          text: 'Server-side events to synchronize payment status changes and external marketplace actions in real time.',
-        },
-        {
-          title: 'Logistics',
-          text: 'Order handling and operational coordination designed to support shipping and post-purchase execution.',
-        },
-        {
-          title: 'Authentication',
-          text: 'User access, protected routes, and role-aware flows for both customers and internal management.',
-        },
-      ],
+    actions: {
+      preview: 'Live preview',
+      code: 'Code',
+      details: 'See more details',
+      hide: 'Hide details',
     },
-    secondary: [
+    projects: [
       {
-        title: 'Abogada Guadalupe Lizarazo',
+        id: 'nautica',
+        label: 'E-commerce full stack',
+        title: 'Nautica del Anzuelo',
+        summary:
+          'Full Stack e-commerce platform for a nautical and fishing business, built to centralize catalog, checkout, and daily operations.',
         description:
+          'Beyond the storefront, it includes operational flows for payments, internal management, and external integrations.',
+        stack: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'Mercado Pago', 'Webhooks'],
+        previewLink: 'https://www.nauticaelanzuelo.com/',
+        previewLabel: 'Official site',
+        media: {
+          type: 'composite',
+          desktop: {
+            src: nauticaDesktopImage,
+            alt: 'Desktop preview of Nautica del Anzuelo',
+          },
+          mobile: {
+            src: nauticaMobileImage,
+            alt: 'Mobile preview of Nautica del Anzuelo',
+          },
+        },
+        details: [
+          {
+            title: 'Admin panel',
+            text: 'Centralized management for products, inventory visibility, media, and order updates.',
+          },
+          {
+            title: 'Payment integration',
+            text: 'Checkout connected to Mercado Pago to support secure purchase flows and payment confirmation.',
+          },
+          {
+            title: 'Webhooks',
+            text: 'Server-side events to synchronize payment status changes and external marketplace actions in real time.',
+          },
+          {
+            title: 'Logistics',
+            text: 'Order handling and operational coordination designed to support shipping and post-purchase execution.',
+          },
+          {
+            title: 'Authentication',
+            text: 'User access, protected routes, and role-aware flows for both customers and internal management.',
+          },
+        ],
+      },
+      {
+        id: 'lawyer',
+        label: 'Professional website',
+        title: 'Abogada Guadalupe Lizarazo',
+        summary:
           'Professional service website structured to communicate legal services clearly, reinforce trust, and convert visits into contact opportunities.',
+        description:
+          'The site focuses on service clarity, professional positioning, and a simple navigation path that leads visitors directly to contact channels.',
         stack: ['HTML5', 'CSS3', 'JavaScript'],
-        link: 'https://draguadalupelizarazo.com',
-        github: 'https://github.com/FigueroaMijael/bogada-Guadalupe-Lizarazo-Derecho-Laboral-Civil-Familia-y-Amparos-de-Salud',
-        image: lawyerImage,
+        previewLink: 'https://draguadalupelizarazo.com',
+        media: {
+          type: 'single',
+          image: {
+            src: lawyerImage,
+            alt: 'Preview of Abogada Guadalupe Lizarazo website',
+          },
+        },
+        details: [
+          {
+            title: 'Trust-first layout',
+            text: 'The structure prioritizes credibility, quick understanding of services, and a professional visual tone for potential clients.',
+          },
+          {
+            title: 'Clear conversion path',
+            text: 'Contact entry points are always visible so visitors can move from discovery to inquiry without friction.',
+          },
+          {
+            title: 'Responsive presentation',
+            text: 'Content hierarchy and spacing were designed to keep the same clarity across mobile and desktop screens.',
+          },
+        ],
       },
     ],
-    preview: 'Preview',
-    code: 'Code',
   },
   es: {
     heading: 'Proyectos',
     intro:
-      'Una selección de trabajo full stack orientado a casos de uso reales, flujos operativos y aplicaciones pensadas para usarse mas allá de la demo.',
-    featured: {
-      label: 'Proyecto destacado',
-      title: 'Nautica del Anzuelo',
-      summary:
-        'Plataforma e-commerce full stack para una marca de náutica y pesca, pensada para centralizar catálogo, checkout y operación diaria.',
-      description:
-        'Además de la tienda, resuelve pagos, administración interna e integraciones necesarias para operar de verdad.',
-      stack: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'Mercado Pago', 'Webhooks'],
-      detailsLabel: 'Ver más información',
-      detailsHideLabel: 'Ocultar información',
-      features: [
-        {
-          title: 'Admin panel',
-          text: 'Gestión centralizada de productos, visibilidad de stock, media y actualización de pedidos.',
-        },
-        {
-          title: 'Payment integration',
-          text: 'Checkout conectado con Mercado Pago para sostener un proceso de compra seguro y trazable.',
-        },
-        {
-          title: 'Webhooks',
-          text: 'Eventos server-side para sincronizar cambios de pago y acciones externas en tiempo real.',
-        },
-        {
-          title: 'Logistics',
-          text: 'Manejo de pedidos y coordinación operativa pensada para el despacho y la post-compra.',
-        },
-        {
-          title: 'Authentication',
-          text: 'Acceso de usuarios, rutas protegidas y flujos con roles para clientes y administración interna.',
-        },
-      ],
+      'Una selección de trabajo full stack orientado a casos de uso reales, flujos operativos y aplicaciones pensadas para usarse más allá de la demo.',
+    actions: {
+      preview: 'Sitio online',
+      code: 'Código',
+      details: 'Ver más detalles',
+      hide: 'Ocultar detalles',
     },
-    secondary: [
+    projects: [
       {
-        title: 'Abogada Guadalupe Lizarazo',
+        id: 'nautica',
+        label: 'E-commerce full stack',
+        title: 'Nautica del Anzuelo',
+        summary:
+          'Plataforma e-commerce full stack para una marca de náutica y pesca, pensada para centralizar catálogo, checkout y operación diaria.',
         description:
+          'Además de la tienda, resuelve pagos, administración interna e integraciones necesarias para operar de verdad.',
+        stack: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'Mercado Pago', 'Webhooks'],
+        previewLink: 'https://www.nauticaelanzuelo.com/',
+        previewLabel: 'Sitio oficial',
+        media: {
+          type: 'composite',
+          desktop: {
+            src: nauticaDesktopImage,
+            alt: 'Vista desktop de Nautica del Anzuelo',
+          },
+          mobile: {
+            src: nauticaMobileImage,
+            alt: 'Vista mobile de Nautica del Anzuelo',
+          },
+        },
+        details: [
+          {
+            title: 'Admin panel',
+            text: 'Gestión centralizada de productos, visibilidad de stock, media y actualización de pedidos.',
+          },
+          {
+            title: 'Payment integration',
+            text: 'Checkout conectado con Mercado Pago para sostener un proceso de compra seguro y trazable.',
+          },
+          {
+            title: 'Webhooks',
+            text: 'Eventos server-side para sincronizar cambios de pago y acciones externas en tiempo real.',
+          },
+          {
+            title: 'Logistics',
+            text: 'Manejo de pedidos y coordinación operativa pensada para el despacho y la post-compra.',
+          },
+          {
+            title: 'Authentication',
+            text: 'Acceso de usuarios, rutas protegidas y flujos con roles para clientes y administración interna.',
+          },
+        ],
+      },
+      {
+        id: 'lawyer',
+        label: 'Sitio profesional',
+        title: 'Abogada Guadalupe Lizarazo',
+        summary:
           'Sitio profesional de servicios diseñado para comunicar especialidades legales con claridad, reforzar confianza y convertir visitas en oportunidades de contacto.',
+        description:
+          'El foco está puesto en ordenar la información, transmitir respaldo profesional y llevar al usuario a una consulta concreta sin fricción.',
         stack: ['HTML5', 'CSS3', 'JavaScript'],
-        link: 'https://draguadalupelizarazo.com',
-        github: 'https://github.com/FigueroaMijael/bogada-Guadalupe-Lizarazo-Derecho-Laboral-Civil-Familia-y-Amparos-de-Salud',
-        image: lawyerImage,
+        previewLink: 'https://draguadalupelizarazo.com',
+        media: {
+          type: 'single',
+          image: {
+            src: lawyerImage,
+            alt: 'Preview del sitio Abogada Guadalupe Lizarazo',
+          },
+        },
+        details: [
+          {
+            title: 'Jerarquía orientada a confianza',
+            text: 'La estructura prioriza credibilidad, comprensión rápida de servicios y una presencia visual profesional.',
+          },
+          {
+            title: 'Conversión directa',
+            text: 'Los accesos a contacto están visibles para que el visitante pueda pasar de la lectura a la consulta sin rodeos.',
+          },
+          {
+            title: 'Presentación responsive',
+            text: 'La jerarquía y el spacing fueron pensados para sostener la misma claridad en mobile y desktop.',
+          },
+        ],
       },
     ],
-    preview: 'Preview',
-    code: 'Code',
   },
 };
 
-const Projects = () => {
+const Project = () => {
   const { language } = useTranslation();
   const content = PROJECTS_CONTENT[language] || PROJECTS_CONTENT.en;
-  const { featured, secondary } = content;
-  const [detailsOpen, setDetailsOpen] = useState(false);
+  const [expandedProject, setExpandedProject] = useState(null);
+
+  const toggleDetails = (projectId) => {
+    setExpandedProject((current) => (current === projectId ? null : projectId));
+  };
 
   return (
     <section className="projects-section" id="project">
@@ -123,96 +205,124 @@ const Projects = () => {
           <p className="projects-intro">{content.intro}</p>
         </div>
 
-        <article className="project-featured-card">
-          <div className="project-featured-media" data-aos="fade-right" data-aos-delay="180">
-            <div className="project-featured-frame">
-              <img alt={featured.title} className="project-featured-image" loading="lazy" src={featuredImage} />
-            </div>
-          </div>
+        <div className="projects-list">
+          {content.projects.map((project, index) => {
+            const isExpanded = expandedProject === project.id;
 
-          <div className="project-featured-content" data-aos="fade-left" data-aos-delay="220">
-            <span className="project-featured-label">{featured.label}</span>
-            <h3 className="project-featured-title">{featured.title}</h3>
-            <p className="project-featured-summary">{featured.summary}</p>
-            <p className="project-featured-description">{featured.description}</p>
-
-            <div className="project-stack-list">
-              {featured.stack.map((item) => (
-                <span className="project-stack-pill" key={item}>
-                  {item}
-                </span>
-              ))}
-            </div>
-
-            <div className="project-feature-actions">
-              <button
-                type="button"
-                className="project-link-button project-link-button-secondary"
-                onClick={() => setDetailsOpen((current) => !current)}
+            return (
+              <article
+                className="project-showcase-card"
+                key={project.id}
+                data-aos="fade-up"
+                data-aos-delay={170 + index * 80}
               >
-                <i className={`bi ${detailsOpen ? 'bi-dash-circle' : 'bi-plus-circle'}`}></i>
-                {detailsOpen ? featured.detailsHideLabel : featured.detailsLabel}
-              </button>
-            </div>
+                <div className="project-showcase-media">
+                  <div className="project-media-surface">
+                    {project.media.type === 'composite' ? (
+                      <div className="project-media-composition">
+                        <div className="project-media-desktop-shell">
+                          <img
+                            alt={project.media.desktop.alt}
+                            className="project-media-desktop"
+                            loading="lazy"
+                            src={project.media.desktop.src}
+                          />
+                        </div>
 
-            {detailsOpen && (
-              <div className="project-feature-grid">
-                {featured.features.map((feature) => (
-                  <article className="project-feature-item" key={feature.title}>
-                    <h4>{feature.title}</h4>
-                    <p>{feature.text}</p>
-                  </article>
-                ))}
-              </div>
-            )}
-          </div>
-        </article>
-
-        <div className="project-grid">
-          {secondary.map((project, index) => (
-            <article
-              className="project-card"
-              key={project.title}
-              data-aos="fade-up"
-              data-aos-delay={220 + index * 90}
-            >
-              <div className="project-image-container">
-                <img alt={project.title} className="project-image" loading="lazy" src={project.image} />
-              </div>
-
-              <div className="project-info">
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-description">{project.description}</p>
-
-                <div className="project-stack-list">
-                  {project.stack.map((item) => (
-                    <span className="project-stack-pill" key={item}>
-                      {item}
-                    </span>
-                  ))}
+                        <div className="project-media-mobile-shell">
+                          <img
+                            alt={project.media.mobile.alt}
+                            className="project-media-mobile"
+                            loading="lazy"
+                            src={project.media.mobile.src}
+                          />
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="project-media-single-shell">
+                        <img
+                          alt={project.media.image.alt}
+                          className="project-media-single"
+                          loading="lazy"
+                          src={project.media.image.src}
+                        />
+                      </div>
+                    )}
+                  </div>
                 </div>
 
-                <footer className="project-footer">
-                  {project.github && (
-                    <a href={project.github} className="project-link-button" target="_blank" rel="noopener noreferrer">
-                      <i className="bi bi-github"></i>
-                      {content.code}
-                    </a>
-                  )}
-                  {project.link && (
-                    <a href={project.link} className="project-link-button" target="_blank" rel="noopener noreferrer">
+                <div className="project-showcase-content">
+                  <span className="project-card-label">{project.label}</span>
+                  <h3 className="project-card-title">{project.title}</h3>
+                  <p className="project-card-summary">{project.summary}</p>
+                  <p className="project-card-description">{project.description}</p>
+
+                  <div className="project-stack-list">
+                    {project.stack.map((item) => (
+                      <span className="project-stack-pill" key={item}>
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="project-actions">
+                    <a
+                      href={project.previewLink}
+                      className="project-link-button project-link-button-primary"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <i className="bi bi-box-arrow-up-right"></i>
-                      {content.preview}
+                      {project.previewLabel || content.actions.preview}
                     </a>
+
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        className="project-link-button project-link-button-secondary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="bi bi-github"></i>
+                        {content.actions.code}
+                      </a>
+                    )}
+
+                    {project.details?.length > 0 && (
+                      <button
+                        type="button"
+                        className="project-link-button project-link-button-ghost"
+                        onClick={() => toggleDetails(project.id)}
+                        aria-expanded={isExpanded}
+                        aria-controls={`project-details-${project.id}`}
+                      >
+                        <i className={`bi ${isExpanded ? 'bi-dash-circle' : 'bi-plus-circle'}`}></i>
+                        {isExpanded ? content.actions.hide : content.actions.details}
+                      </button>
+                    )}
+                  </div>
+
+                  {project.details?.length > 0 && (
+                    <div
+                      className={`project-details ${isExpanded ? 'is-open' : ''}`}
+                      id={`project-details-${project.id}`}
+                    >
+                      {project.details.map((detail) => (
+                        <article className="project-detail-item" key={detail.title}>
+                          <h4>{detail.title}</h4>
+                          <p>{detail.text}</p>
+                        </article>
+                      ))}
+                    </div>
                   )}
-                </footer>
-              </div>
-            </article>
-          ))}
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 };
 
-export default Projects;
+export default Project;

@@ -111,7 +111,7 @@ const Content = () => {
             ))}
           </div>
 
-          <div className="wrapper">
+          <div className="wrapper" data-aos="fade-up" data-aos-delay="1100">
             {SOCIAL_LINKS.map((link) => (
               <a
                 key={link.label}
@@ -120,7 +120,7 @@ const Content = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-aos="fade-up"
-                data-aos-delay={1250}
+                data-aos-delay={10}
               >
                 <div className="icon">
                   <img src={link.icon} alt={link.label} />

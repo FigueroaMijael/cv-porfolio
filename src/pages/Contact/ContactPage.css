@@ -20,14 +20,15 @@
 }
 
 .icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 6rem 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 5rem 2rem;
+  justify-items: center;
+  max-width: 72rem;
+  margin: 6rem auto 0;
 }
 
 .icons a {
-  margin: 5rem 3rem;
   text-decoration: none;
   color: #fff;
   display: block;
@@ -159,6 +160,12 @@ body.dark .contactos .site-contacto {
 }
 
 @media (max-width: 760px) {
+  .icons {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 34rem;
+    gap: 4.6rem 1.8rem;
+  }
+
   .icons a .text {
     bottom: -35px;
     opacity: 1;
@@ -171,7 +178,17 @@ body.dark .contactos .site-contacto {
     padding: 0 1rem;
   }
 
-  .icons a {
-    margin: 4rem 2rem;
+  .icons {
+    max-width: 30rem;
+    gap: 4.2rem 1.2rem;
+  }
+
+  .icons a .layer {
+    width: 6.4rem;
+    height: 6.4rem;
+  }
+
+  .icons a .layer span.fab {
+    font-size: 3.5rem;
   }
 }
