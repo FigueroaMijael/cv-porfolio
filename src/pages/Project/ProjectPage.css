@@ -153,16 +153,36 @@
   aspect-ratio: 16 / 10;
 }
 
+.project-media-single-shell-contain {
+  display: grid;
+  place-items: center;
+  padding: 1.2rem;
+  background:
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.08), transparent 50%),
+    linear-gradient(180deg, rgba(22, 24, 26, 0.98), rgba(9, 10, 11, 0.98));
+}
+
 .project-media-single {
   height: 100%;
   object-fit: cover;
   object-position: center top;
 }
 
+.project-media-single-contain {
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  border-radius: 1.2rem;
+}
+
 .project-showcase-card:hover .project-media-desktop,
 .project-showcase-card:hover .project-media-mobile,
 .project-showcase-card:hover .project-media-single {
   transform: scale(1.02);
+}
+
+.project-showcase-card:hover .project-media-single-contain {
+  transform: none;
 }
 
 .project-showcase-content {
@@ -342,6 +362,12 @@ body.dark .project-media-single-shell {
   background:
     radial-gradient(circle at top left, rgba(0, 254, 47, 0.18), transparent 38%),
     linear-gradient(180deg, rgba(26, 32, 26, 0.98), rgba(12, 16, 12, 0.98));
+}
+
+body.dark .project-media-single-shell-contain {
+  background:
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent 52%),
+    linear-gradient(180deg, rgba(18, 19, 22, 0.98), rgba(6, 7, 8, 0.98));
 }
 
 body.dark .project-card-label,

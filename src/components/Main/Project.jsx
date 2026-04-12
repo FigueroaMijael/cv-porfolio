@@ -72,6 +72,7 @@ const PROJECTS_CONTENT = {
           image: {
             src: lawyerImage,
             alt: 'Preview of Abogada Guadalupe Lizarazo website',
+            fit: 'contain',
           },
         },
         details: [
@@ -158,6 +159,7 @@ const PROJECTS_CONTENT = {
           image: {
             src: lawyerImage,
             alt: 'Preview del sitio Abogada Guadalupe Lizarazo',
+            fit: 'contain',
           },
         },
         details: [
@@ -271,10 +273,16 @@ const ProjectCard = ({ content, index, isExpanded, project, toggleDetails }) => 
                   </div>
                 </div>
               ) : (
-                <div className="project-media-single-shell">
+                <div
+                  className={`project-media-single-shell${
+                    project.media.image.fit === 'contain' ? ' project-media-single-shell-contain' : ''
+                  }`}
+                >
                   <img
                     alt={project.media.image.alt}
-                    className="project-media-single"
+                    className={`project-media-single${
+                      project.media.image.fit === 'contain' ? ' project-media-single-contain' : ''
+                    }`}
                     loading="lazy"
                     src={project.media.image.src}
                   />
