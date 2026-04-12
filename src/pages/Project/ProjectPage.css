@@ -51,7 +51,7 @@
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
   gap: clamp(2rem, 3vw, 3.2rem);
-  align-items: stretch;
+  align-items: start;
   padding: clamp(2rem, 3vw, 3rem);
   border-radius: 2.6rem;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(241, 249, 242, 0.98));
@@ -63,19 +63,33 @@
   transform: translateY(-6px);
 }
 
+.project-showcase-sidebar {
+  position: relative;
+  align-self: start;
+  min-width: 0;
+}
+
+.project-showcase-media-track {
+  --project-media-offset: 0px;
+  width: 100%;
+  transform: translate3d(0, var(--project-media-offset), 0);
+  transition: transform 0.18s ease-out;
+  will-change: transform;
+}
+
 .project-showcase-media {
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
   justify-content: center;
 }
 
 .project-media-surface {
-  width: 100%;
-  min-height: 100%;
+  width: min(100%, 48rem);
   padding: 1.2rem;
   border-radius: 2.2rem;
   background: linear-gradient(180deg, rgba(11, 17, 11, 0.96), rgba(34, 44, 34, 0.98));
   box-shadow: 0 24px 40px rgba(0, 0, 0, 0.22);
+  margin-inline: auto;
 }
 
 .project-media-composition {
@@ -132,17 +146,17 @@
 }
 
 .project-media-single-shell {
-  min-height: 100%;
+  position: relative;
   border-radius: 1.8rem;
   overflow: hidden;
   background: linear-gradient(180deg, rgba(244, 249, 244, 0.98), rgba(221, 234, 222, 0.98));
+  aspect-ratio: 16 / 10;
 }
 
 .project-media-single {
   height: 100%;
-  min-height: 32rem;
   object-fit: cover;
-  object-position: top center;
+  object-position: center top;
 }
 
 .project-showcase-card:hover .project-media-desktop,
@@ -368,8 +382,13 @@ body.dark .project-link-button-ghost:hover {
     grid-template-columns: 1fr;
   }
 
-  .project-media-surface {
-    min-height: 30rem;
+  .project-showcase-media-track {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .project-media-single-shell {
+    max-width: 72rem;
+    margin: 0 auto;
   }
 }
 
@@ -387,6 +406,10 @@ body.dark .project-link-button-ghost:hover {
     width: min(34%, 10.8rem);
     right: 1.2rem;
     bottom: 1.2rem;
+  }
+
+  .project-media-single-shell {
+    aspect-ratio: 4 / 3;
   }
 
   .project-details {

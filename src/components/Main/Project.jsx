@@ -1,8 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import '../../pages/Project/ProjectPage.css';
-import nauticaMobileImage from '../../img/project/nautica-anzuelo-mobile.jpeg';
-import nauticaDesktopImage from '../../img/project/Anzuelo.png';
-import lawyerImage from '../../img/project/draguada.png';
+import nauticaCompositeImage from '../../img/project/nautica-anzuelo-composite.jpeg';
+import lawyerImage from '../../img/project/lizarazo-composite.jpeg';
 import { useTranslation } from '../../Context/Languaje-context';
 
 const PROJECTS_CONTENT = {
@@ -29,14 +28,10 @@ const PROJECTS_CONTENT = {
         previewLink: 'https://www.nauticaelanzuelo.com/',
         previewLabel: 'Official site',
         media: {
-          type: 'composite',
-          desktop: {
-            src: nauticaDesktopImage,
-            alt: 'Desktop preview of Nautica del Anzuelo',
-          },
-          mobile: {
-            src: nauticaMobileImage,
-            alt: 'Mobile preview of Nautica del Anzuelo',
+          type: 'single',
+          image: {
+            src: nauticaCompositeImage,
+            alt: 'Composite preview of Nautica del Anzuelo on desktop and mobile',
           },
         },
         details: [
@@ -119,14 +114,10 @@ const PROJECTS_CONTENT = {
         previewLink: 'https://www.nauticaelanzuelo.com/',
         previewLabel: 'Sitio oficial',
         media: {
-          type: 'composite',
-          desktop: {
-            src: nauticaDesktopImage,
-            alt: 'Vista desktop de Nautica del Anzuelo',
-          },
-          mobile: {
-            src: nauticaMobileImage,
-            alt: 'Vista mobile de Nautica del Anzuelo',
+          type: 'single',
+          image: {
+            src: nauticaCompositeImage,
+            alt: 'Preview compuesta de Nautica del Anzuelo en desktop y mobile',
           },
         },
         details: [
@@ -188,6 +179,181 @@ const PROJECTS_CONTENT = {
   },
 };
 
+const ProjectCard = ({ content, index, isExpanded, project, toggleDetails }) => {
+  const cardRef = useRef(null);
+  const mediaSurfaceRef = useRef(null);
+  const mediaTrackRef = useRef(null);
+
+  useEffect(() => {
+    let frameId = null;
+
+    const updateMediaOffset = () => {
+      frameId = null;
+
+      const card = cardRef.current;
+      const mediaSurface = mediaSurfaceRef.current;
+      const mediaTrack = mediaTrackRef.current;
+
+      if (!card || !mediaSurface || !mediaTrack) {
+        return;
+      }
+
+      if (window.innerWidth <= 1024) {
+        mediaTrack.style.setProperty('--project-media-offset', '0px');
+        return;
+      }
+
+      const cardRect = card.getBoundingClientRect();
+      const cardStyles = window.getComputedStyle(card);
+      const paddingTop = parseFloat(cardStyles.paddingTop) || 0;
+      const paddingBottom = parseFloat(cardStyles.paddingBottom) || 0;
+      const availableHeight = card.offsetHeight - paddingTop - paddingBottom;
+      const maxOffset = Math.max(0, availableHeight - mediaSurface.offsetHeight);
+      const topOffset = 112;
+      const nextOffset = Math.max(0, Math.min(maxOffset, topOffset - cardRect.top - paddingTop));
+
+      mediaTrack.style.setProperty('--project-media-offset', `${nextOffset}px`);
+    };
+
+    const scheduleUpdate = () => {
+      if (frameId !== null) {
+        return;
+      }
+
+      frameId = window.requestAnimationFrame(updateMediaOffset);
+    };
+
+    scheduleUpdate();
+
+    window.addEventListener('scroll', scheduleUpdate, { passive: true });
+    window.addEventListener('resize', scheduleUpdate);
+
+    return () => {
+      window.removeEventListener('scroll', scheduleUpdate);
+      window.removeEventListener('resize', scheduleUpdate);
+
+      if (frameId !== null) {
+        window.cancelAnimationFrame(frameId);
+      }
+    };
+  }, [isExpanded]);
+
+  return (
+    <article
+      className="project-showcase-card"
+      key={project.id}
+      data-aos="fade-up"
+      data-aos-delay={170 + index * 80}
+      ref={cardRef}
+    >
+      <div className="project-showcase-sidebar">
+        <div className="project-showcase-media-track" ref={mediaTrackRef}>
+          <div className="project-showcase-media">
+            <div className="project-media-surface" ref={mediaSurfaceRef}>
+              {project.media.type === 'composite' ? (
+                <div className="project-media-composition">
+                  <div className="project-media-desktop-shell">
+                    <img
+                      alt={project.media.desktop.alt}
+                      className="project-media-desktop"
+                      loading="lazy"
+                      src={project.media.desktop.src}
+                    />
+                  </div>
+
+                  <div className="project-media-mobile-shell">
+                    <img
+                      alt={project.media.mobile.alt}
+                      className="project-media-mobile"
+                      loading="lazy"
+                      src={project.media.mobile.src}
+                    />
+                  </div>
+                </div>
+              ) : (
+                <div className="project-media-single-shell">
+                  <img
+                    alt={project.media.image.alt}
+                    className="project-media-single"
+                    loading="lazy"
+                    src={project.media.image.src}
+                  />
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="project-showcase-content">
+        <span className="project-card-label">{project.label}</span>
+        <h3 className="project-card-title">{project.title}</h3>
+        <p className="project-card-summary">{project.summary}</p>
+        <p className="project-card-description">{project.description}</p>
+
+        <div className="project-stack-list">
+          {project.stack.map((item) => (
+            <span className="project-stack-pill" key={item}>
+              {item}
+            </span>
+          ))}
+        </div>
+
+        <div className="project-actions">
+          <a
+            href={project.previewLink}
+            className="project-link-button project-link-button-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="bi bi-box-arrow-up-right"></i>
+            {project.previewLabel || content.actions.preview}
+          </a>
+
+          {project.github && (
+            <a
+              href={project.github}
+              className="project-link-button project-link-button-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="bi bi-github"></i>
+              {content.actions.code}
+            </a>
+          )}
+
+          {project.details?.length > 0 && (
+            <button
+              type="button"
+              className="project-link-button project-link-button-ghost"
+              onClick={() => toggleDetails(project.id)}
+              aria-expanded={isExpanded}
+              aria-controls={`project-details-${project.id}`}
+            >
+              <i className={`bi ${isExpanded ? 'bi-dash-circle' : 'bi-plus-circle'}`}></i>
+              {isExpanded ? content.actions.hide : content.actions.details}
+            </button>
+          )}
+        </div>
+
+        {project.details?.length > 0 && (
+          <div
+            className={`project-details ${isExpanded ? 'is-open' : ''}`}
+            id={`project-details-${project.id}`}
+          >
+            {project.details.map((detail) => (
+              <article className="project-detail-item" key={detail.title}>
+                <h4>{detail.title}</h4>
+                <p>{detail.text}</p>
+              </article>
+            ))}
+          </div>
+        )}
+      </div>
+    </article>
+  );
+};
+
 const Project = () => {
   const { language } = useTranslation();
   const content = PROJECTS_CONTENT[language] || PROJECTS_CONTENT.en;
@@ -210,113 +376,14 @@ const Project = () => {
             const isExpanded = expandedProject === project.id;
 
             return (
-              <article
-                className="project-showcase-card"
+              <ProjectCard
                 key={project.id}
-                data-aos="fade-up"
-                data-aos-delay={170 + index * 80}
-              >
-                <div className="project-showcase-media">
-                  <div className="project-media-surface">
-                    {project.media.type === 'composite' ? (
-                      <div className="project-media-composition">
-                        <div className="project-media-desktop-shell">
-                          <img
-                            alt={project.media.desktop.alt}
-                            className="project-media-desktop"
-                            loading="lazy"
-                            src={project.media.desktop.src}
-                          />
-                        </div>
-
-                        <div className="project-media-mobile-shell">
-                          <img
-                            alt={project.media.mobile.alt}
-                            className="project-media-mobile"
-                            loading="lazy"
-                            src={project.media.mobile.src}
-                          />
-                        </div>
-                      </div>
-                    ) : (
-                      <div className="project-media-single-shell">
-                        <img
-                          alt={project.media.image.alt}
-                          className="project-media-single"
-                          loading="lazy"
-                          src={project.media.image.src}
-                        />
-                      </div>
-                    )}
-                  </div>
-                </div>
-
-                <div className="project-showcase-content">
-                  <span className="project-card-label">{project.label}</span>
-                  <h3 className="project-card-title">{project.title}</h3>
-                  <p className="project-card-summary">{project.summary}</p>
-                  <p className="project-card-description">{project.description}</p>
-
-                  <div className="project-stack-list">
-                    {project.stack.map((item) => (
-                      <span className="project-stack-pill" key={item}>
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="project-actions">
-                    <a
-                      href={project.previewLink}
-                      className="project-link-button project-link-button-primary"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <i className="bi bi-box-arrow-up-right"></i>
-                      {project.previewLabel || content.actions.preview}
-                    </a>
-
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        className="project-link-button project-link-button-secondary"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className="bi bi-github"></i>
-                        {content.actions.code}
-                      </a>
-                    )}
-
-                    {project.details?.length > 0 && (
-                      <button
-                        type="button"
-                        className="project-link-button project-link-button-ghost"
-                        onClick={() => toggleDetails(project.id)}
-                        aria-expanded={isExpanded}
-                        aria-controls={`project-details-${project.id}`}
-                      >
-                        <i className={`bi ${isExpanded ? 'bi-dash-circle' : 'bi-plus-circle'}`}></i>
-                        {isExpanded ? content.actions.hide : content.actions.details}
-                      </button>
-                    )}
-                  </div>
-
-                  {project.details?.length > 0 && (
-                    <div
-                      className={`project-details ${isExpanded ? 'is-open' : ''}`}
-                      id={`project-details-${project.id}`}
-                    >
-                      {project.details.map((detail) => (
-                        <article className="project-detail-item" key={detail.title}>
-                          <h4>{detail.title}</h4>
-                          <p>{detail.text}</p>
-                        </article>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </article>
+                content={content}
+                index={index}
+                isExpanded={isExpanded}
+                project={project}
+                toggleDetails={toggleDetails}
+              />
             );
           })}
         </div>

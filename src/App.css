@@ -56,7 +56,8 @@ body.menu-open{
 main,
 .main {
     padding:2rem 8%;
-    overflow: hidden!important;
+    overflow-x: hidden;
+    overflow-y: visible;
 }
 
 
